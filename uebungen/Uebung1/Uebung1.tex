@@ -8,6 +8,7 @@
 %\usepackage{listings}
 %\lstset{frame=single,breaklines=true}
 \usepackage{ amssymb }
+\usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{enumerate}
 \pagestyle{scrheadings}
@@ -66,11 +67,20 @@ Warhscheinlichkeit das $|y\rangle$ gemessen wird: $|\frac{-i}{2}|^2=\frac{1}{4}=
 \end{enumerate}
 \newpage
 \section*{Aufgabe 2}
+Eine Matrix U ist unitär $\Leftrightarrow$ $U\cdot U^{\dagger}=E$, wobei $E$ die Einheitsmatrix ist.\\\\
+
+\noindent$M_{\neg}\cdot M_{\neg}^{\dagger}=\begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix}\cdot \begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix}= \begin{pmatrix} 1 & 0\\ 0 & 1\end{pmatrix}=E_2$\\\\
+
+\noindent$\sqrt{M_{\neg}}\cdot\sqrt{M_\neg}^\dagger=\begin{pmatrix} \frac{1+i}{2} & \frac{1-i}{2}\\ \frac{1-i}{2} & \frac{1+i}{2}\end{pmatrix}\cdot \begin{pmatrix} \frac{1-i}{2} & \frac{1+i}{2}\\ \frac{1+i}{2} & \frac{1-i}{2}\end{pmatrix}= \begin{pmatrix} \frac{1}{2}+\frac{1}{2} & 1+2i-1+1-2i-1\\ 1+2i-1+1-2i-1 & \frac{1}{2}+\frac{1}{2}\end{pmatrix}=\begin{pmatrix} 1 & 0 \\ 0 & 1\end{pmatrix} =E_2$\\\\
+
+\noindent$\sqrt{M_\neg}^2= \begin{pmatrix}\frac{1+i}{2} & \frac{1-i}{2} \\ \frac{1-i}{2} & \frac{1+i}{2}\end{pmatrix}\cdot \begin{pmatrix}\frac{1+i}{2} & \frac{1-i}{2} \\ \frac{1-i}{2} & \frac{1+i}{2}\end{pmatrix}= \begin{pmatrix}2i-2i & \frac{1}{2}+ \frac{1}{2} \\ \frac{1}{2}+ \frac{1}{2} & 2i-2i \end{pmatrix}= \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}= M_\neg$
+
+\newpage
+\section*{Aufgabe 3}
 \begin{enumerate}[a)]
 
 %a)
 \item 
 \end{enumerate}
-\newpage
 
 \end{document}
