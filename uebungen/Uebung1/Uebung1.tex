@@ -14,7 +14,7 @@
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
 \ihead{Übungsblatt 1\\Nils Werner Matr.Nr}
-\chead{\\Paul Rösler Matr.Nr.}
+\chead{\\Paul Rösler 108012225686	}
 \ohead{Übungsgruppe: Mo. 16:00\\Daniel Teuchert 108012214552}
 \setheadsepline{0.4pt}
 \begin{document}
@@ -61,8 +61,8 @@ $\Rightarrow i \cdot |x\rangle = \frac{i}{2}|\spadesuit\rangle-\frac{i}{2}|\bigs
 $\Leftrightarrow i \cdot |x\rangle -|y\rangle = i|\spadesuit\rangle-i|\bigstar\rangle$ Nun wird Gleichung iii. eingesetzt.\\
 $\Leftrightarrow i \cdot |x\rangle -|y\rangle = i\cdot \sqrt{2}\cdot|x\rangle-i\cdot|\bigstar\rangle-i\cdot|\bigstar\rangle= i\cdot \sqrt{2}\cdot|x\rangle-i\cdot 2\cdot |\bigstar\rangle$\\
 $\Leftrightarrow 2\cdot i\cdot|\bigstar\rangle= -i \cdot|x\rangle+|y\rangle+i\cdot \sqrt{2} \cdot |z\rangle$\\
-$\Leftrightarrow |\bigstar\rangle= \frac{-1}{2}|x\rangle-\frac{i}{2}|y\rangle+\sqrt{2}\cdot |z\rangle \Rightarrow$\\
-Warhscheinlichkeit das $|y\rangle$ gemessen wird: $|\frac{-i}{2}|^2=\frac{1}{4}=25\%$
+$\Leftrightarrow |\bigstar\rangle= \frac{-1}{2}|x\rangle-\frac{i}{2}|y\rangle+\frac{1}{\sqrt{2}}\cdot |z\rangle \Rightarrow$\\
+Warhscheinlichkeit dass $|y\rangle$ gemessen wird: $|\frac{-i}{2}|^2=\frac{1}{4}=25\%$
 
 \end{enumerate}
 \newpage
@@ -83,10 +83,21 @@ Eine Matrix U ist unitär $\Leftrightarrow$ $U\cdot U^{\dagger}=E$, wobei $E$ di
 \item $|v_{zwischen}\rangle=\sqrt{M_\neg}\cdot |v_{init}\rangle$\\
 $|v_{final}\rangle=\sqrt{M_\neg}\cdot |v_{zwischen}\rangle= \sqrt{M_\neg}^2\cdot |v_{init}\rangle$ Es gilt: $\sqrt{M_\neg}^2=M_\neg$\\
 $\Rightarrow |v_{final}\rangle=M_\neg\cdot |v_{init}\rangle= \begin{pmatrix}0 & 1\\1&0\end{pmatrix}\cdot |0\rangle= \begin{pmatrix}0\\1\end{pmatrix}= 0\cdot |0\rangle+1\cdot |1\rangle$\\
-$\Rightarrow$ Ws das $|0\rangle$ gemessen wird: $|0|^2=0\% \Rightarrow$ Ws das $|1\rangle$ gemessen wird: $100\%$
+$\Rightarrow$ Ws dass $|0\rangle$ gemessen wird: $|0|^2=0\% \Rightarrow$ Ws dass $|1\rangle$ gemessen wird: $100\%$
 
 %b)
-\item 
+\item $|v_{zwischen}\rangle=\sqrt{M_\neg}\cdot |v_{init}\rangle=\begin{pmatrix}\frac{1+i}{2}\\\frac{1-i}{2}\end{pmatrix}=\frac{1+i}{2}\cdot |0\rangle+\frac{1-i}{2}\cdot |1\rangle$\\
+$\Rightarrow$ Ws dass $|0\rangle$ gemessen wird: $|\frac{1+i}{2}|^2=\frac{1}{2}=50\%$, Ws dass $|1\rangle$ gemessen wird: $|\frac{1-i}{2}|^2=\frac{1}{2}=50\%$\\\\
+Fall 1: Es wurde $|0\rangle$ gemessen (mit Ws 50\%)
+$\Rightarrow |v_{zwischen}\rangle=|0\rangle$\\
+$\Rightarrow |v_{final'}\rangle=\sqrt{M_\neg}\cdot |0\rangle= \begin{pmatrix}\frac{1+i}{2} & \frac{1-i}{2}\\\frac{1-i}{2}&\frac{1+i}{2}\end{pmatrix}\cdot |0\rangle= \begin{pmatrix}\frac{1+i}{2}\\\frac{1-i}{2}\end{pmatrix}=\frac{1+i}{2}\cdot |0\rangle+\frac{1-i}{2}\cdot |1\rangle$\\
+$\Rightarrow$ Ws dass $|0\rangle$ gemessen wird: $\frac{1}{2}\cdot|\frac{1+i}{2}|^2=\frac{1}{4}=25\%$, Ws dass $|1\rangle$ gemessen wird: $\frac{1}{2}\cdot|\frac{1-i}{2}|^2=\frac{1}{4}=25\%$\\\\
+Fall 2: Es wurde $|1\rangle$ gemessen (mit Ws 50\%)
+$\Rightarrow |v_{zwischen}\rangle=|1\rangle$\\
+$\Rightarrow |v_{final'}\rangle=\sqrt{M_\neg}\cdot |1\rangle= \begin{pmatrix}\frac{1+i}{2} & \frac{1-i}{2}\\\frac{1-i}{2}&\frac{1+i}{2}\end{pmatrix}\cdot |1\rangle= \begin{pmatrix}\frac{1-i}{2}\\\frac{1+i}{2}\end{pmatrix}=\frac{1-i}{2}\cdot |0\rangle+\frac{1+i}{2}\cdot |1\rangle$\\
+$\Rightarrow$ Ws dass $|0\rangle$ gemessen wird: $\frac{1}{2}\cdot|\frac{1-i}{2}|^2=\frac{1}{4}=25\%$, Ws dass $|1\rangle$ gemessen wird: $\frac{1}{2}\cdot|\frac{1+i}{2}|^2=\frac{1}{4}=25\%$\\\\
+$\Rightarrow$ Insgesamt: Ws dass $|0\rangle$ gemessen wird: $2\cdot\frac{1}{4}=50\%$, Ws dass $|1\rangle$ gemessen wird: $2\cdot\frac{1}{4}=50\%$
+
 \end{enumerate}
 
 \end{document}
