@@ -13,7 +13,7 @@
 \usepackage{enumerate}
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
-\ihead{Übungsblatt 1\\Nils Werner Matr.Nr}
+\ihead{Übungsblatt 1\\Nils Werner 108012219293}
 \chead{\\Paul Rösler 108012225686	}
 \ohead{Übungsgruppe: Mo. 16:00\\Daniel Teuchert 108012214552}
 \setheadsepline{0.4pt}
@@ -62,7 +62,39 @@ $\Leftrightarrow i \cdot |x\rangle -|y\rangle = i|\spadesuit\rangle-i|\bigstar\r
 $\Leftrightarrow i \cdot |x\rangle -|y\rangle = i\cdot \sqrt{2}\cdot|x\rangle-i\cdot|\bigstar\rangle-i\cdot|\bigstar\rangle= i\cdot \sqrt{2}\cdot|x\rangle-i\cdot 2\cdot |\bigstar\rangle$\\
 $\Leftrightarrow 2\cdot i\cdot|\bigstar\rangle= -i \cdot|x\rangle+|y\rangle+i\cdot \sqrt{2} \cdot |z\rangle$\\
 $\Leftrightarrow |\bigstar\rangle= \frac{-1}{2}|x\rangle-\frac{i}{2}|y\rangle+\frac{1}{\sqrt{2}}\cdot |z\rangle \Rightarrow$\\
-Warhscheinlichkeit dass $|y\rangle$ gemessen wird: $|\frac{-i}{2}|^2=\frac{1}{4}=25\%$
+Wahrscheinlichkeit dass $|y\rangle$ gemessen wird: $|\frac{-i}{2}|^2=\frac{1}{4}=25\%$
+
+%e)
+\item 
+Es gilt:\\
+$\langle \spadesuit | \spadesuit\rangle =1 \wedge \langle \bigstar | \bigstar \rangle=1 \wedge \langle \blacklozenge | \blacklozenge\rangle =1$\\
+Weiterhin muss gelten:\\
+$U|\spadesuit\rangle=|x\rangle \wedge U|\bigstar\rangle=|y\rangle \wedge U|\blacklozenge\rangle=|w\rangle$\\
+$\Rightarrow U=|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|w\rangle\langle\blacklozenge|$\\
+$\Rightarrow U^\dagger= |\spadesuit\rangle\langle x|+|\bigstar\rangle\langle y|+|\blacklozenge\rangle\langle w|$\\
+Damit $U$ unitär ist muss gelten: $U\cdot U^\dagger=1_3=U^\dagger\cdot U$\\
+$U\cdot U^\dagger = (|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|w\rangle\langle\blacklozenge|)\cdot(|\spadesuit\rangle\langle x|+|\bigstar\rangle\langle y|+|\blacklozenge\rangle\langle w|)$\\
+$= |x\rangle\langle\spadesuit|\spadesuit\rangle\langle x|+|x\rangle\langle\spadesuit|\bigstar\rangle\langle y|+|x\rangle\langle\spadesuit|\blacklozenge\rangle\langle w|$\\
+$+|y\rangle\langle\bigstar|\spadesuit\rangle\langle x|+|y\rangle\langle\bigstar|\bigstar\rangle\langle y|+|y\rangle\langle\bigstar|\blacklozenge\rangle\langle w|$\\
+$+|w\rangle\langle\blacklozenge|\spadesuit\rangle\langle x|+|w\rangle\langle\blacklozenge|\bigstar\rangle\langle y|+|w\rangle\langle\blacklozenge|\blacklozenge\rangle\langle w|$\\
+$= |x\rangle\langle x|+|y\rangle\langle y|+|w\rangle\langle w|$\\
+Da $|x\rangle$, $|y\rangle$ und $|w\rangle$ kein Orthonomalsystem bilden ist $|x\rangle\langle x|+|y\rangle\langle y|+|w\rangle\langle w|\neq E$\\
+$\Rightarrow U$ ist nicht unitär.\\
+Somit kann keine Unitäre Matrix mit den geforderten Eigenschaften existieren.
+
+%f)
+\item Für $U'=|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|z\rangle\langle\blacklozenge|$ gilt:\\
+$U'|\spadesuit\rangle=|x\rangle$, $U'|\bigstar\rangle=|y\rangle$, $U'|\blacklozenge\rangle=|z\rangle$, da:\\
+$U'|\spadesuit\rangle=|x\rangle\langle\spadesuit|\spadesuit\rangle+|y\rangle\langle\bigstar|\spadesuit\rangle+|z\rangle\langle\blacklozenge|\spadesuit\rangle = |x\rangle\cdot 1+|y\rangle\cdot 0+|z\rangle\cdot 0=|x\rangle$\\
+$U'|\bigstar\rangle=|x\rangle\langle\spadesuit|\bigstar\rangle+|y\rangle\langle\bigstar|\bigstar\rangle+|z\rangle\langle\blacklozenge|\bigstar\rangle = |x\rangle\cdot 0+|y\rangle\cdot 1+|z\rangle\cdot 0=|y\rangle$\\
+$U'|\blacklozenge\rangle=|x\rangle\langle\spadesuit|\blacklozenge\rangle+|y\rangle\langle\bigstar|\blacklozenge\rangle+|z\rangle\langle\blacklozenge|\blacklozenge\rangle = |x\rangle\cdot 0+|y\rangle\cdot 0+|z\rangle\cdot 1=|z\rangle$\\
+Außerdem: $U'^{\dagger}=(|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|z\rangle\langle\blacklozenge|)^{\dagger}=|\spadesuit\rangle\langle x|+|\bigstar\rangle\langle y|+|\blacklozenge\rangle\langle z|$\\
+$U'\cdot U'^{\dagger}=(|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|z\rangle\langle\blacklozenge|)\cdot(|\spadesuit\rangle\langle x|+|\bigstar\rangle\langle y|+|\blacklozenge\rangle\langle z|)$\\
+$=|x\rangle\langle\spadesuit|\spadesuit\rangle\langle x|+|y\rangle\langle\bigstar|\spadesuit\rangle\langle x|+|z\rangle\langle\blacklozenge|\spadesuit\rangle\langle x|+...$\\
+$=|x\rangle\langle\spadesuit|\spadesuit\rangle\langle x|+|y\rangle\langle\bigstar|\bigstar\rangle\langle y|+|z\rangle\langle\blacklozenge|\blacklozenge\rangle\langle z|$\\
+$=|x\rangle\langle x|+|y\rangle\langle y|+|z\rangle\langle z|$\\
+$=E$\\
+$\Rightarrow U'^{\dagger} = U'^{-1} \Rightarrow U'$ ist unitär.
 
 \item Für $U'=|x\rangle\langle\spadesuit|+|y\rangle\langle\bigstar|+|z\rangle\langle\blacklozenge|$ gilt:\\
 $U'|\spadesuit\rangle=|x\rangle$, $U'|\bigstar\rangle=|y\rangle$, $U'|\blacklozenge\rangle=|z\rangle$, da:\\
