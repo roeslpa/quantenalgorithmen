@@ -43,7 +43,50 @@ Wsk, bei $|z\rangle$ im 3. Qubit $|\beta\rangle$ zu messen: $0$\\
 Zustand danach kann nicht angegeben werden, da das Ereignis nicht eintritt.\\
 \newpage
 \section*{Aufgabe 2}
-
+$P_{n,n} = 
+ \begin{pmatrix}
+  p_{1,1} & p_{1,2} & \cdots & p_{1,n} \\
+  p_{2,1} & p_{2,2} & \cdots & p_{2,n} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  p_{n,1} & p_{n,2} & \cdots & p_{n,n} 
+ \end{pmatrix}$ mit $
+P_{n,n}^{\dagger} = 
+ \begin{pmatrix}
+  p_{1,1} & p_{2,1} & \cdots & p_{n,1} \\
+  p_{1,2} & p_{2,2} & \cdots & p_{n,2} \\
+  \vdots  & \vdots  & \ddots & \vdots  \\
+  p_{1,n} & p_{2,n} & \cdots & p_{n,n} 
+\end{pmatrix}$\\\\
+Z.z: $P_{n,n}^{\dagger} = P_{n,n}^{-1} \Leftrightarrow P_{n,n} \cdot P_{n,n}^{\dagger} = E_n$:\\
+$\begin{pmatrix}
+p_{1,1} & p_{1,2} & \cdots & p_{1,n} \\
+p_{2,1} & p_{2,2} & \cdots & p_{2,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+p_{n,1} & p_{n,2} & \cdots & p_{n,n} 
+\end{pmatrix} \cdot
+\begin{pmatrix}
+p_{1,1} & p_{2,1} & \cdots & p_{n,1} \\
+p_{1,2} & p_{2,2} & \cdots & p_{n,2} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+p_{1,n} & p_{2,n} & \cdots & p_{n,n} 
+\end{pmatrix}$\\
+$ =
+\begin{pmatrix}
+p_{1,1}^2+p_{1,2}^2+...+p_{1,n}^2 & p_{1,1}p_{2,1}+p_{1,2}p_{2,2}+...+p_{1,n}p_{2,n} & \cdots & p_{1,1}p_{n,1}+p_{1,2}p_{n,2}+...+p_{1,n}p_{n,n} \\
+p_{2,1}p_{1,1}+p_{2,2}p_{1,2}+...+p_{2,n}p_{1,n} & p_{2,1}^2+p_{2,2}^2+...+p_{2,n}^2 & \cdots & p_{2,1}p_{n,1}+p_{2,2}p_{n,2}+...+p_{2,n}p_{n,n} \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+p_{n,1}p_{1,1}+p_{n,2}p_{1,2}+...+p_{n,n}p_{1,n} & p_{n,1}p_{2,1}+p_{n,2}p_{2,2}+...+p_{n,n}p_{2,n} & \cdots & p_{n,1}^2+p_{n,2}^2+...+p_{n,n}^2 
+\end{pmatrix}$\\\\
+$p_{i,1}^2+p_{i,2}^2+...+p_{i,n}^2=1~\forall i \in \{1,...,n\}$ da hier jeweils die Quadrate aller Einträge einer Zeile summiert werden. Da in einer Zeile nur an einer Stelle eine 1 steht, ergibt das Quadrat nur an dieser Stelle eine 1, sonst eine 0.\\
+$p_{i,1}p_{j,1}+p_{i,2}p_{j,2}+...+p_{i,n}p_{j,n} = 0~\forall i\neq j \in \{1,...,n\}$ da hier jeweils zwei Einträge aus einer Spalte miteinander multipliziert werden, die nicht in der gleichen Zeile stehen. Da die Faktoren ungleich sind und damit einer der beiden 0 sein muss, ist das Produkt jeweils 0. Die Summe über diese Produkte ist damit 0.\\
+$\Rightarrow P_{n,n} \cdot P_{n,n}^{\dagger} =
+\begin{pmatrix}
+1 & 0 & \cdots & 0 \\
+0 & 1 & \cdots & 0 \\
+\vdots  & \vdots  & \ddots & \vdots  \\
+0 & 0 & \cdots & 1 
+\end{pmatrix} = E_n$\\
+$\Rightarrow P_{n,n}$ ist eine unitäre Matrix.
 
 \newpage
 \section*{Aufgabe 3}
