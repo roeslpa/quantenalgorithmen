@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage[a4paper, total={19cm, 23cm}]{geometry}
 \usepackage{stmaryrd}
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
@@ -26,19 +27,19 @@ $\Leftrightarrow |1\rangle = \sqrt{2} |\alpha\rangle-|0\rangle \land |0\rangle =
 $\Leftrightarrow |1\rangle = \sqrt{2} |\alpha\rangle-\frac{\sqrt{2}}{i} |\beta\rangle-|1\rangle \land |0\rangle = \frac{\sqrt{2}}{2i} |\beta\rangle + \frac{1}{\sqrt{2}} |\alpha\rangle$\\
 $\Leftrightarrow |1\rangle = \frac{1}{\sqrt{2}} |\alpha\rangle+\frac{i}{\sqrt{2}} |\beta\rangle \land |0\rangle =\frac{1}{\sqrt{2}} |\alpha\rangle - \frac{i}{\sqrt{2}} |\beta\rangle $\\
 $\Rightarrow |z\rangle = \frac{1+i}{2} |0_1 0_2 0_3\rangle  + \frac{1}{2} |1_1 1_2 0_3\rangle + \frac{i}{2} |1_1 0_2 1_3\rangle $\\
-$= \frac{1+i}{2}( \frac{1}{\sqrt{2}} |\alpha_1\rangle - \frac{i}{\sqrt{2}} |\beta_1\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_2\rangle - \frac{i}{\sqrt{2}} |\beta_2\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_3\rangle - \frac{i}{\sqrt{2}} |\beta_3\rangle )$\\
-$+ \frac{1}{2} (\frac{1}{\sqrt{2}} |\alpha_1\rangle+\frac{i}{\sqrt{2}} |\beta_1\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_2\rangle+\frac{i}{\sqrt{2}} |\beta_2\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_3\rangle - \frac{i}{\sqrt{2}} |\beta_3\rangle ) $\\
-$+ \frac{i}{2} (\frac{1}{\sqrt{2}} |\alpha_1\rangle+\frac{i}{\sqrt{2}} |\beta_1\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_2\rangle - \frac{i}{\sqrt{2}} |\beta_2\rangle \otimes \frac{1}{\sqrt{2}} |\alpha_3\rangle+\frac{i}{\sqrt{2}} |\beta_3\rangle ) $\\
-$= \frac{1+i}{\sqrt{2}} |\alpha_1\rangle \otimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \otimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
+$= \frac{1+i}{2}( \frac{1}{\sqrt{2}} |\alpha_1\rangle - \frac{i}{\sqrt{2}} |\beta_1\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_2\rangle - \frac{i}{\sqrt{2}} |\beta_2\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_3\rangle - \frac{i}{\sqrt{2}} |\beta_3\rangle )$\\
+$+ \frac{1}{2} (\frac{1}{\sqrt{2}} |\alpha_1\rangle+\frac{i}{\sqrt{2}} |\beta_1\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_2\rangle+\frac{i}{\sqrt{2}} |\beta_2\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_3\rangle - \frac{i}{\sqrt{2}} |\beta_3\rangle ) $\\
+$+ \frac{i}{2} (\frac{1}{\sqrt{2}} |\alpha_1\rangle+\frac{i}{\sqrt{2}} |\beta_1\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_2\rangle - \frac{i}{\sqrt{2}} |\beta_2\rangle \bigotimes \frac{1}{\sqrt{2}} |\alpha_3\rangle+\frac{i}{\sqrt{2}} |\beta_3\rangle ) $\\
+$= \frac{1+i}{\sqrt{2}} |\alpha_1\rangle \bigotimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \bigotimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
 
 Wsk, bei $|z\rangle$ im 1. Qubit $|\alpha\rangle$ zu messen: $|\frac{1+i}{\sqrt{2}}| = 1$\\
-Zustand danach: $\frac{1+i}{\sqrt{2}} |\alpha_1\rangle \otimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \otimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
+Zustand danach: $\frac{1+i}{\sqrt{2}} |\alpha_1\rangle \bigotimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \bigotimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
 
 Wsk, bei $|z\rangle$ im 1. Qubit $|\beta\rangle$ zu messen: $0$\\
 Zustand danach kann nicht angegeben werden, da das Ereignis nicht eintritt.\\
 
 Wsk, bei $|z\rangle$ im 3. Qubit $|\alpha\rangle$ zu messen: $|\frac{1+i}{\sqrt{2}}| = 1$\\
-Zustand danach: $\frac{1+i}{\sqrt{2}} |\alpha_1\rangle \otimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \otimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
+Zustand danach: $\frac{1+i}{\sqrt{2}} |\alpha_1\rangle \bigotimes (\frac{1+i}{\sqrt{2}} |\alpha_2\rangle + \frac{1}{\sqrt{2}} |\beta_2\rangle) \bigotimes \frac{1+i}{\sqrt{2}} |\alpha_3\rangle $\\
 
 Wsk, bei $|z\rangle$ im 3. Qubit $|\beta\rangle$ zu messen: $0$\\
 Zustand danach kann nicht angegeben werden, da das Ereignis nicht eintritt.\\
@@ -91,7 +92,13 @@ $\Rightarrow P_{n,n}$ ist eine unitäre Matrix.
 
 \newpage
 \section*{Aufgabe 3}
-
+$|y\rangle = |y_1 y_2...y_n\rangle = |y_1\rangle \bigotimes ... \bigotimes |y_n\rangle$\\
+$H_n|y\rangle =\bigotimes_{i=1}^nW_2|y\rangle =(W_2\bigotimes W_2\bigotimes ... \bigotimes W_2)(|y_1\rangle \bigotimes |y_2\rangle \bigotimes ... \bigotimes |y_n\rangle) = (W_2|y_1)\bigotimes (W_2|y_2\rangle)\bigotimes ... \bigotimes (W_2|y_n\rangle)$\\
+Es gilt: $W_2|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ und $W_2|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)$\\
+$\Rightarrow (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_1}|1\rangle ))\bigotimes (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_2} |1\rangle)) \bigotimes ... \bigotimes (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_n}|1\rangle))$\\
+$=  2^{-\frac{n}{2}}(|00...0\rangle + (-1)^{y_n}|00...01\rangle+ (-1)^{y_{n-1}}|00...010\rangle + (-1)^{y_n+y_{n-1}}|00....011\rangle + ... + (-1)^{\sum_{i=1}^n y_i}|11...1\rangle$\\
+$=  2^{-\frac{n}{2}}((-1)^{|00\rangle \cdot y }|00...0\rangle + (-1)^{|00...01\rangle \cdot y}|00...01\rangle+ (-1)^{|00...010\rangle \cdot y}|00...010\rangle + (-1)^{|00...011\rangle \cdot y}|00...011\rangle + ... + (-1)^{|11...1\rangle \cdot y}|11...1\rangle$\\
+$= 2^\frac{n}{2}\sum_{x = 0^n \in \{0,1\}^n}^{1^n}(-1)^{x\cdot y}|x\rangle = H_n|y\rangle$
 
 \newpage
 \section*{Aufgabe 4}
@@ -148,9 +155,9 @@ $\frac{1}{\sqrt{2}} \begin{pmatrix}
 
 %b)
 \item Nein, da:\\
-$(U' \otimes U') |00\rangle = |ERP\rangle$\\
-$\Leftrightarrow (U' |0_1\rangle) \otimes (U' |0_2\rangle) = |ERP\rangle$\\
-$\Leftrightarrow |ERP_1\rangle \otimes |ERP_2\rangle = |ERP\rangle~ \lightning$\\
+$(U' \bigotimes U') |00\rangle = |ERP\rangle$\\
+$\Leftrightarrow (U' |0_1\rangle) \bigotimes (U' |0_2\rangle) = |ERP\rangle$\\
+$\Leftrightarrow |ERP_1\rangle \bigotimes |ERP_2\rangle = |ERP\rangle~ \lightning$\\
 Da $|ERP\rangle$ verschränkt ist, kann es nicht als Tensorprodukt zweier Vektoren berechnet werden.
 \end{enumerate}
 \newpage
