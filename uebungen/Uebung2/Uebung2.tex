@@ -165,7 +165,7 @@ Da $|ERP\rangle$ verschränkt ist, kann es nicht als Tensorprodukt zweier Vektor
 \begin{enumerate}[a)]
 
 %a)
-\item Zu Beginn ist das System in Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
+\item Zu Beginn ist das System im Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
 Fall 1: Alice führt zuerst ihre Operation durch. Zustand danach:\\
 $|x_{zwischen}\rangle=(U_A\bigotimes E_{m})|x\rangle = (U_A|x_1...x_n\rangle)\bigotimes (E_{m}|x_{n+1}...x_{n+m}\rangle)$\\
 Nun führt Bob seine Operation durch. Zustand danach:\\
@@ -178,5 +178,32 @@ Nun führt Alice ihre Operation durch. Zustand danach:\\
 $|x'\rangle = (U_A\bigotimes E_m)|x_{zwischen}\rangle= (U_A\bigotimes E_m) ((E_n|x_1...x_n\rangle)\bigotimes (U_B|x_{n+1}...x_{n+m}\rangle))$\\
 $= (E_nU_A|x_1...x_n\rangle)\bigotimes (E_mU_B|x_{n+1}...x_{n+m}\rangle)=(U_A|x_1...x_n\rangle)\bigotimes (U_B|x_{n+1}...x_{n+m}\rangle)$\\
 Wie zu erkennen ist, hängt der Zustand $|x'\rangle$ nicht davon ab ob Bob oder Alice zuerst ihre Operation durchführt.
+
+%b)
+\item Zu Beginn ist das System im Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
+Fall 1: Alice misst bevor Bob seine Operation durchführt:\\
+Wahrscheinlichkeit bei $|x\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen: $|(|v\rangle \langle v|\bigotimes E_m)|x\rangle|^2$\\\\
+
+\noindent Fall 2: Alice misst nachdem Bob seine Operation durchgeführt hat:\\
+Das System ist nun in dem Zustand $|x'\rangle = (E_n\bigotimes U_B)|x\rangle = (E_n|x_1x_2...x_n\rangle)\bigotimes(U_B|x_{n+1}...x_{n+m}\rangle)$\\
+Wahrscheinlichkeit bei $|x'\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen:\\
+$|(|v\rangle \langle v|\bigotimes E_m)|x'\rangle|^2= |(|v\rangle \langle v|\bigotimes E_m)((E_n|x_1x_2...x_n\rangle)\bigotimes(U_B|x_{n+1}...x_{n+m}\rangle))|^2$\\\\
+
+%c)
+\item Zu Beginn ist das System im Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
+Fall 1: Alice misst bevor Bob seine Operation durchführt:\\
+Zustand nach dem in den ersten $n$ Qubits $|v\rangle$ gemessen wurde: $|x_{zwischen}\rangle= \frac{(|v\rangle\langle v|\bigotimes E_m)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}$\\
+Nun führt Bob seine Operation durch:\\
+$|x'\rangle = (E_n\bigotimes U_B)|x_{zwischen}\rangle= (E_n\bigotimes U_B)\frac{(|v\rangle\langle v|\bigotimes E_m)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}$\\\\
+
+\noindent Fall 2: Alice misst nachdem Bob seine Operation durchgeführt hat:\\
+Zustand nach dem Bob seine Operation durchgeführt hat:\\
+$|x_{zwischen}\rangle= (E_n\bigotimes U_B)|x\rangle$\\
+Nun misst Alice den Zustand $|v\rangle$ an den ersten $n$ Qubits. Zustand danach:\\
+$|x'\rangle = \frac{(|v\rangle\langle v|\bigotimes E_m)|x_{zwischen}\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x_{zwischen}\rangle ||}= \frac{(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle}{ ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}$\\
+Wie bereits in Aufgabenteil b) gezeigt gilt: $||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||^2= ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||^2$\\
+ Und somit auch $||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||=||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||$\\
+ $\Rightarrow \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}$\\
+ $\Rightarrow$ Der Gesamtzustand des Systems nach der Messung von $|v\rangle$ und Anwenden von $U_B$ hängt nicht davon ab, ob Alice ihre Messung vor oder nach Bobs Operation durchführt.
 \end{enumerate}
 \end{document}
