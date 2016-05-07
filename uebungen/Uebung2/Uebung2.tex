@@ -11,6 +11,7 @@
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{stmaryrd}
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
 \ihead{Übungsblatt 2\\Nils Werner 108012219293}
@@ -97,13 +98,60 @@ $\Rightarrow P_{n,n}$ ist eine unitäre Matrix.
 \begin{enumerate}[a)]
 
 %a)
-\item Es muss gelten: $U |00\rangle=\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle )$\\
-$\Leftrightarrow U = \frac{1}{\sqrt{2}}(|00 \rangle + |11\rangle)\cdot \langle 00|= \frac{1}{\sqrt{2}}(|00\rangle \langle 00|+|11\rangle \langle 00|)= \begin{pmatrix}
+\item Es muss gelten: $U |00\rangle=\frac{1}{\sqrt{2}}(|00\rangle + |11\rangle )=|\beta_{00}\rangle$\\
+Des weiteren gelte: $U |01\rangle=\frac{1}{\sqrt{2}}(|01\rangle + |10\rangle )=|\beta_{01}\rangle$, $U |10\rangle=\frac{1}{\sqrt{2}}(|00\rangle - |11\rangle )=|\beta_{10}\rangle$, $U |11\rangle=\frac{1}{\sqrt{2}}(|01\rangle - |10\rangle )=|\beta_{11}\rangle$\\
+$\Rightarrow U = |\beta_{00}\rangle \langle 00| + |\beta_{01}\rangle \langle 01| + |\beta_{10}\rangle \langle 10| + |\beta_{11}\rangle \langle 11|$\\
+$= \frac{1}{\sqrt{2}} \Bigg( \begin{pmatrix}
 1&0&0&0\\
 0&0&0&0\\
 0&0&0&0\\
 1&0&0&0
-\end{pmatrix}$
+\end{pmatrix} + \begin{pmatrix}
+0&0&0&0\\
+0&1&0&0\\
+0&1&0&0\\
+0&0&0&0
+\end{pmatrix} + \begin{pmatrix}
+0&0&1&0\\
+0&0&0&0\\
+0&0&0&0\\
+0&0&-1&0
+\end{pmatrix} + \begin{pmatrix}
+0&0&0&0\\
+0&0&0&1\\
+0&0&0&-1\\
+0&0&0&0
+\end{pmatrix}\Bigg)$\\
+$=\frac{1}{\sqrt{2}} \begin{pmatrix}
+1&0&1&0\\
+0&1&0&1\\
+0&1&0&-1\\
+1&0&-1&0
+\end{pmatrix}$\\
+Z.z: $U^{\dagger} = U^{-1} \Leftrightarrow U \cdot U^{\dagger} = E_4$:\\
+$\frac{1}{\sqrt{2}} \begin{pmatrix}
+1&0&1&0\\
+0&1&0&1\\
+0&1&0&-1\\
+1&0&-1&0
+\end{pmatrix} \cdot \frac{1}{\sqrt{2}} \begin{pmatrix}
+1&0&0&1\\
+0&1&1&0\\
+1&0&0&-1\\
+0&1&-1&0
+\end{pmatrix} = \frac{1}{2} \begin{pmatrix}
+2&0&0&0\\
+0&2&0&0\\
+0&0&2&0\\
+0&0&0&2
+\end{pmatrix} = E_4$
+
+%b)
+\item Nein, da:\\
+$(U' \otimes U') |00\rangle = |ERP\rangle$\\
+$\Leftrightarrow (U' |0_1\rangle) \otimes (U' |0_2\rangle) = |ERP\rangle$\\
+$\Leftrightarrow |ERP_1\rangle \otimes |ERP_2\rangle = |ERP\rangle~ \lightning$\\
+Da $|ERP\rangle$ verschränkt ist, kann es nicht als Tensorprodukt zweier Vektoren berechnet werden.
 \end{enumerate}
 \newpage
 \section*{Aufgabe 5}
