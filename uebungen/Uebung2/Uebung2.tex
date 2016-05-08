@@ -186,9 +186,9 @@ Fall 1: Alice misst bevor Bob seine Operation durchführt:\\
 Wahrscheinlichkeit bei $|y\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen: $|(|v\rangle \langle v|\bigotimes E_m)|y\rangle|^2$\\
 
 \noindent Fall 2: Alice misst nachdem Bob seine Operation durchgeführt hat:\\
-Das System ist nun in dem Zustand $|y'\rangle = (E_n\bigotimes U_B)|y\rangle = (E_n|y_1y_2...y_n\rangle)\bigotimes(U_B|y_{n+1}...y_{n+m}\rangle)$\\
+Das System ist nun in dem Zustand $|y'\rangle = (E_n\bigotimes U_B)|y\rangle$\\
 Wahrscheinlichkeit bei $|y'\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen:\\
-$|(|v\rangle \langle v|\bigotimes E_m)|y'\rangle|^2= |(|v\rangle \langle v|\bigotimes E_m)((E_n|y_1y_2...y_n\rangle)\bigotimes(U_B|y_{n+1}...y_{n+m}\rangle))|^2$\\
+$|(|v\rangle \langle v|\bigotimes E_m)|y'\rangle|^2= |(|v\rangle \langle v|\bigotimes E_m)((E_n\bigotimes U_B)|y\rangle)|^2$\\
 $=|(|v\rangle \langle v|\bigotimes U_B) |y\rangle|^2$ Da $U_B$ unitäre Abbildung und für unitäre Abbildungen gilt: $| |y\rangle | = |U |y\rangle|$ (s. S. 4 Script)\\
 $\Rightarrow  |(|v\rangle \langle v|\bigotimes U_B) |y\rangle|^2 = |(|v\rangle \langle v|\bigotimes E_m) |y\rangle|^2$\\
 $\Rightarrow$ Die Wahrscheinlichkeit ist unabhängig von der Reihenfolge.\\
