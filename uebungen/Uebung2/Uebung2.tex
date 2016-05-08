@@ -97,7 +97,8 @@ $H_n|y\rangle =\bigotimes_{i=1}^nW_2|y\rangle =(W_2\bigotimes W_2\bigotimes ... 
 Es gilt: $W_2|0\rangle = \frac{1}{\sqrt{2}}(|0\rangle + |1\rangle)$ und $W_2|1\rangle = \frac{1}{\sqrt{2}}(|0\rangle - |1\rangle)$\\
 $\Rightarrow (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_1}|1\rangle ))\bigotimes (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_2} |1\rangle)) \bigotimes ... \bigotimes (\frac{1}{\sqrt{2}}(|0\rangle + (-1)^{y_n}|1\rangle))$\\
 $=  2^{-\frac{n}{2}}(|00...0\rangle + (-1)^{y_n}|00...01\rangle+ (-1)^{y_{n-1}}|00...010\rangle + (-1)^{y_n+y_{n-1}}|00....011\rangle + ... + (-1)^{\sum_{i=1}^n y_i}|11...1\rangle$\\
-$=  2^{-\frac{n}{2}}((-1)^{|0...0\rangle \cdot y }|00...0\rangle + (-1)^{|00...01\rangle \cdot y}|00...01\rangle+ (-1)^{|00...010\rangle \cdot y}|00...010\rangle + (-1)^{|00...011\rangle \cdot y}|00...011\rangle + ... + (-1)^{|11...1\rangle \cdot y}|11...1\rangle$\\
+$=  2^{-\frac{n}{2}}((-1)^{|0...0\rangle \cdot y }|00...0\rangle + (-1)^{|00...01\rangle \cdot y}|00...01\rangle+ (-1)^{|00...010\rangle \cdot y}|00...010\rangle$\\
+$ + (-1)^{|00...011\rangle \cdot y}|00...011\rangle + ... + (-1)^{|11...1\rangle \cdot y}|11...1\rangle$\\
 $= 2^\frac{n}{2}\sum_{x = 0^n \in \{0,1\}^n}^{1^n}(-1)^{x\cdot y}|x\rangle = H_n|y\rangle$
 
 \newpage
@@ -180,30 +181,33 @@ $= (E_nU_A|x_1...x_n\rangle)\bigotimes (E_mU_B|x_{n+1}...x_{n+m}\rangle)=(U_A|x_
 Wie zu erkennen ist, hängt der Zustand $|x'\rangle$ nicht davon ab ob Bob oder Alice zuerst ihre Operation durchführt.
 
 %b)
-\item Zu Beginn ist das System im Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
+\item Zu Beginn ist das System im Zustand $|y\rangle =|y_1y_2...y_{n+m}\rangle$. \\
 Fall 1: Alice misst bevor Bob seine Operation durchführt:\\
-Wahrscheinlichkeit bei $|x\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen: $|(|v\rangle \langle v|\bigotimes E_m)|x\rangle|^2$\\\\
+Wahrscheinlichkeit bei $|y\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen: $|(|v\rangle \langle v|\bigotimes E_m)|y\rangle|^2$\\
 
 \noindent Fall 2: Alice misst nachdem Bob seine Operation durchgeführt hat:\\
-Das System ist nun in dem Zustand $|x'\rangle = (E_n\bigotimes U_B)|x\rangle = (E_n|x_1x_2...x_n\rangle)\bigotimes(U_B|x_{n+1}...x_{n+m}\rangle)$\\
-Wahrscheinlichkeit bei $|x'\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen:\\
-$|(|v\rangle \langle v|\bigotimes E_m)|x'\rangle|^2= |(|v\rangle \langle v|\bigotimes E_m)((E_n|x_1x_2...x_n\rangle)\bigotimes(U_B|x_{n+1}...x_{n+m}\rangle))|^2$\\\\
+Das System ist nun in dem Zustand $|y'\rangle = (E_n\bigotimes U_B)|y\rangle = (E_n|y_1y_2...y_n\rangle)\bigotimes(U_B|y_{n+1}...y_{n+m}\rangle)$\\
+Wahrscheinlichkeit bei $|y'\rangle$ in den ersten $n$ Qubits $|v\rangle$ zu messen:\\
+$|(|v\rangle \langle v|\bigotimes E_m)|y'\rangle|^2= |(|v\rangle \langle v|\bigotimes E_m)((E_n|y_1y_2...y_n\rangle)\bigotimes(U_B|y_{n+1}...y_{n+m}\rangle))|^2$\\
+$=|(|v\rangle \langle v|\bigotimes U_B) |y\rangle|^2$ Da $U_B$ unitäre Abbildung und für unitäre Abbildungen gilt: $| |y\rangle | = |U |y\rangle|$ (s. S. 4 Script)\\
+$\Rightarrow  |(|v\rangle \langle v|\bigotimes U_B) |y\rangle|^2 = |(|v\rangle \langle v|\bigotimes E_m) |y\rangle|^2$\\
+$\Rightarrow$ Die Wahrscheinlichkeit ist unabhängig von der Reihenfolge.\\
 
 %c)
-\item Zu Beginn ist das System im Zustand $|x\rangle =|x_1x_2...x_{n+m}\rangle$. \\
+\item Zu Beginn ist das System im Zustand $|y\rangle =|y_1y_2...y_{n+m}\rangle$. \\
 Fall 1: Alice misst bevor Bob seine Operation durchführt:\\
-Zustand nach dem in den ersten $n$ Qubits $|v\rangle$ gemessen wurde: $|x_{zwischen}\rangle= \frac{(|v\rangle\langle v|\bigotimes E_m)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}$\\
+Zustand nach dem in den ersten $n$ Qubits $|v\rangle$ gemessen wurde: $|y_{zwischen}\rangle= \frac{(|v\rangle\langle v|\bigotimes E_m)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||}$\\
 Nun führt Bob seine Operation durch:\\
-$|x'\rangle = (E_n\bigotimes U_B)|x_{zwischen}\rangle= (E_n\bigotimes U_B)\frac{(|v\rangle\langle v|\bigotimes E_m)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}$\\\\
+$|y'\rangle = (E_n\bigotimes U_B)|y_{zwischen}\rangle= (E_n\bigotimes U_B)\frac{(|v\rangle\langle v|\bigotimes E_m)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||}$\\
 
 \noindent Fall 2: Alice misst nachdem Bob seine Operation durchgeführt hat:\\
 Zustand nach dem Bob seine Operation durchgeführt hat:\\
-$|x_{zwischen}\rangle= (E_n\bigotimes U_B)|x\rangle$\\
+$|y_{zwischen}\rangle= (E_n\bigotimes U_B)|y\rangle$\\
 Nun misst Alice den Zustand $|v\rangle$ an den ersten $n$ Qubits. Zustand danach:\\
-$|x'\rangle = \frac{(|v\rangle\langle v|\bigotimes E_m)|x_{zwischen}\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x_{zwischen}\rangle ||}= \frac{(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle}{ ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}$\\
-Wie bereits in Aufgabenteil b) gezeigt gilt: $||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||^2= ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||^2$\\
- Und somit auch $||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||=||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||$\\
- $\Rightarrow \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|x\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|x\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|x\rangle ||}$\\
+$|y'\rangle = \frac{(|v\rangle\langle v|\bigotimes E_m)|y_{zwischen}\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|y_{zwischen}\rangle ||}= \frac{(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle}{ ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle ||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle ||}$\\
+Wie bereits in Aufgabenteil b) gezeigt gilt: $||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||^2= ||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle ||^2$\\
+ Und somit auch $||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||=||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle ||$\\
+ $\Rightarrow \frac{((|v\rangle\langle v|)\bigotimes U_B)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)|y\rangle||}= \frac{((|v\rangle\langle v|)\bigotimes U_B)|y\rangle}{||(|v\rangle\langle v|\bigotimes E_m)(E_n\bigotimes U_B)|y\rangle ||}$\\
  $\Rightarrow$ Der Gesamtzustand des Systems nach der Messung von $|v\rangle$ und Anwenden von $U_B$ hängt nicht davon ab, ob Alice ihre Messung vor oder nach Bobs Operation durchführt.
 \end{enumerate}
 \end{document}
