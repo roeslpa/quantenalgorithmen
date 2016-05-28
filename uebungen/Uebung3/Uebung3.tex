@@ -13,6 +13,7 @@
 \usepackage{enumerate}
 \usepackage[a4paper, total={19cm, 23cm}]{geometry}
 \usepackage{stmaryrd}
+\usepackage{graphicx}
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
 \ihead{Übungsblatt 3\\Nils Werner 108012219293}
@@ -22,9 +23,26 @@
 \begin{document}
 
 \section*{Aufgabe 1}
+Zu zeigen: $\{nor, c\}$ ist universell, zeige: $nand$ kann durch $nor$ dargestellt werden, da $\{nand,c\}$ universell ist (siehe Vorlesung), ist dann auch $\{nor, c\}$ universell.
+
+\begin{figure}[htp] \centering{
+\includegraphics[scale=0.5]{nand.pdf}}
+\caption{Schaltkreis $nand$ aus $nor$}
+\end{figure}
+
+$nand = \overline{\overline{\overline{x_1 \vee x_1} \vee \overline{x_2 \vee x_2}}~~\vee ~~\overline{\overline{x_1 \vee x_1} \vee \overline{x_2 \vee x_2}}}$\\
+$= \overline{\overline{\overline{x_1} \vee \overline{x_2}}~~\vee ~~\overline{\overline{x_1} \vee \overline{x_2}}}$\\
+$= \overline{(x_1 \wedge x_2)~~\vee ~~(x_1 \wedge x_2)}$\\
+$= \overline{x_1 \wedge x_2}~~\wedge ~~\overline{x_1 \wedge x_2}$\\
+$= \overline{x_1 \wedge x_2} = nand(x_1,x_2)$
 
 \newpage
 \section*{Aufgabe 2}
+
+\begin{figure}[htp] \centering{
+\includegraphics[scale=0.5]{xor.pdf}}
+\caption{Schaltkreis $xor$ aus $nor$}
+\end{figure}
 
 \newpage
 \section*{Aufgabe 3}
