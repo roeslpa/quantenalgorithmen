@@ -48,8 +48,15 @@ $= \overline{x_1 \wedge x_2} = nand(x_1,x_2)$
 \section*{Aufgabe 3}
 
 Beschreibung einer Funktion $f: \{0,1\}^n \rightarrow \{0,1\}^m$ als $f((x_1,...,x_n))=(y_1,...,y_m)$ mit disjunktiver Normalform:\\
-$y_j = ((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n ) \vee ... \vee ((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n )$ mit $1\leq j \leq m$ und $(\neg)$ symbolisiert eine mögliche Negierung\\
-Der Term $((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n )$ ist maximal $n/2$ Mal in einer Gleichung, sonst wird die konjunktive Normalform verwendet, die dann maximal $n/2$ Terme mit $n$ Variablen enthält.
+$y_j = ((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n ) \vee ... \vee ((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n )$ mit $1\leq j \leq m$ und $(\neg)$ symbolisiert eine mögliche Negierung.\\
+Der Term $((\neg) x_1 \wedge (\neg) x_2 \wedge ... \wedge (\neg) x_n )$ existiert maximal $\lceil n/2 \rceil$ Mal in einer Gleichung, sonst wird die konjunktive Normalform verwendet, die dann maximal $\lceil n/2 \rceil$ Terme mit $n$ Variablen enthält.\\
+Unter der Annahme, dass die Operationen nur zwei Eingänge haben, sieht die Gleichung für jedes $y_j$ unter Verwendung der disjunktiven Normalform wie folgt aus:
+%\begin{figure}[htp] \centering{
+%\includegraphics[scale=0.5]{disNorm.pdf}}
+%\caption{Disjunktive Normalform für Funkion $f((x_1,...,x_n))=(y_1,...,y_m)$}
+%\end{figure}
+
+Die maximale Tiefe für $y_j$ ergibt der Weg zu $x_1$. Zwischen $x_1$ und $y_j$ befinden sich maxmial eine Negierung, $n-1~AND$ und $n-2~OR$ Operationen. Da die Schaltkreise für alle anderen $k$ mit $1\leq k\leq m \wedge j\neq k$ parallel zu dem Schaltkreis für $j$ verlaufen und das gleiche Maximum besitzen, hat der Weg zwischen einem Eingabeknoten und einem Ausgabeknoten in dieser Darstellung einer Funktion $f$ die maximale Länge $1+(n-1)+(n-2)+1$\\ $=2n-1 \in O(n)$.
 
 \newpage
 \section*{Aufgabe 4}
