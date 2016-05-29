@@ -63,23 +63,25 @@ Da jede Funktion in der Disjunktiven bzw. Konjunktiven Normalform beschrieben we
 \section*{Aufgabe 4}
 \begin{enumerate}[a)]
 
-\item $M_C^{|a\rangle}(|b\rangle)$ ist der Erwartungswert des Zustands nach der Messung durch $C$ in der Basis mit $|a\rangle$ von $|b\rangle$.\\
+\item $M_C^{|a\rangle,|b\rangle}(|d\rangle)$ ist der Erwartungswert des Zustands nach der Messung durch $C$ in der Basis mit $|a\rangle,|b\rangle$ von $|d\rangle$.\\
 $|y\rangle = \frac{1}{\sqrt{2}} (|0\rangle -|1\rangle)$
 
-$P[b=0] = P[M_B^{|0\rangle}(|z'\rangle)=|0\rangle~|~a'=0]~P[a'=0] + P[M_B^{|x\rangle}(|z'\rangle)=|x\rangle~|~a'=1]~P[a'=1]$\\
-$=P[M_B^{|0\rangle}(M_E^{|\alpha \rangle}(|z\rangle))=|0\rangle~|~a'=0]~\frac{1}{2} + P[M_B^{|x\rangle}(M_E^{|\alpha \rangle}(|z\rangle))=|x\rangle~|~a'=1]~\frac{1}{2}$\\
-$=\frac{1}{2} (P[M_B^{|0\rangle}(M_E^{|\alpha \rangle}(|0\rangle))=|0\rangle~|~a'=0 \wedge a=0]~P[a=0] + P[M_B^{|0\rangle}(M_E^{|\alpha \rangle}(|x\rangle))=|0\rangle~|~a'=0 \wedge a=1]~P[a=1])$\\
-$+\frac{1}{2} (P[M_B^{|x\rangle}(M_E^{|\alpha \rangle}(|0\rangle))=|x\rangle~|~a'=1 \wedge a=0]~P[a=0] + P[M_B^{|x\rangle}(M_E^{|\alpha \rangle}(|x\rangle))=|x\rangle~|~a'=0 \wedge a=1]~P[a=1])$\\
-$=\frac{1}{4} (P[M_B^{|0\rangle}(|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)=|0\rangle] + P[M_B^{|0\rangle}(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)=|0\rangle]$\\
-$+ P[M_B^{|x\rangle}(|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)=|x\rangle] + P[M_B^{|x\rangle}(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)=|x\rangle])$\\
+$P[b=0] = P[M_B^{|0\rangle,|1\rangle}(|z'\rangle)=|0\rangle~|~a'=0]~P[a'=0] + P[M_B^{|x\rangle,|y\rangle}(|z'\rangle)=|x\rangle~|~a'=1]~P[a'=1]$\\
+$=P[M_B^{|0\rangle,|1\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|z\rangle))=|0\rangle~|~a'=0]~\frac{1}{2} + P[M_B^{|x\rangle,|y\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|z\rangle))=|x\rangle~|~a'=1]~\frac{1}{2}$\\
+$=\frac{1}{2} (P[M_B^{|0\rangle,|1\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|0\rangle))=|0\rangle~|~a'=0 \wedge a=0]~P[a=0]$\\
+$+ P[M_B^{|0\rangle,|1\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|x\rangle))=|0\rangle~|~a'=0 \wedge a=1]~P[a=1])$\\
+$+\frac{1}{2} (P[M_B^{|x\rangle,|y\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|0\rangle))=|x\rangle~|~a'=1 \wedge a=0]~P[a=0]$\\
+$+ P[M_B^{|x\rangle,|y\rangle}(M_E^{|\alpha\rangle,|\beta\rangle}(|x\rangle))=|x\rangle~|~a'=0 \wedge a=1]~P[a=1])$\\
+$=\frac{1}{4} (P[M_B^{|0\rangle,|1\rangle}(\langle \alpha|0\rangle \langle 0|\alpha\rangle~|\alpha\rangle + \langle \beta|0\rangle \langle 0|\beta\rangle~|\beta\rangle)=|0\rangle] + P[M_B^{|0\rangle,|1\rangle}(\langle \alpha|x\rangle \langle x|\alpha\rangle~|\alpha\rangle + \langle \beta|x\rangle \langle x|\beta\rangle~|\beta\rangle)=|0\rangle]$\\
+$+ P[M_B^{|x\rangle,|y\rangle}(|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)=|x\rangle] + P[M_B^{|x\rangle,|y\rangle}(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)=|x\rangle])$\\
+Gilt weil: $M_C^{|a\rangle,|b\rangle}(|d\rangle) = |\langle a|d\rangle|^2~|a\rangle + |\langle b|d\rangle|^2~|b\rangle =\langle a|d\rangle \langle d|a\rangle~|a\rangle + \langle b|d\rangle \langle d|b\rangle~|b\rangle$\\\\
 $=\frac{1}{4} (P[|\langle 0|(|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|0\rangle + |\langle 1|(|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|1\rangle=|0\rangle]$\\
 $+ P[|\langle 0|(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|0\rangle + |\langle 1|(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|1\rangle =|0\rangle]$\\
 $+ P[|\langle x| (|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|x\rangle + |\langle y| (|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|y\rangle =|x\rangle]$\\
 $+ P[|\langle x| (|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|x\rangle + |\langle y| (|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|y\rangle =|x\rangle])$\\
-$=\frac{1}{4} (P[||\langle \alpha|0\rangle|^2~\langle 0|\alpha\rangle + |\langle \beta|0\rangle|^2~\langle 0|\beta\rangle)|^2~|0\rangle + ||\langle \alpha|0\rangle|^2~\langle 1|\alpha\rangle + |\langle \beta|0\rangle|^2~\langle 1|\beta\rangle)|^2~|1\rangle=|0\rangle]$\\\\
-todo
-$+ P[|\langle 0|(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|0\rangle + |\langle 1|(|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|1\rangle =|0\rangle]$\\
-$+ P[|\langle x| (|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|x\rangle + |\langle y| (|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|y\rangle =|x\rangle]$\\
+$=\frac{1}{4} (P[||\langle \alpha|0\rangle|^2~\langle 0|\alpha\rangle + |\langle \beta|0\rangle|^2~\langle 0|\beta\rangle)|^2~|0\rangle + ||\langle \alpha|0\rangle|^2~\langle 1|\alpha\rangle + |\langle \beta|0\rangle|^2~\langle 1|\beta\rangle)|^2~|1\rangle=|0\rangle]$\\
+$+ P[||\langle \alpha|x\rangle|^2~\langle 0|\alpha\rangle + |\langle \beta|x\rangle|^2~\langle 0|\beta\rangle|^2~|0\rangle + ||\langle \alpha|x\rangle|^2~\langle 1|\alpha\rangle + |\langle \beta|x\rangle|^2~\langle 1|\beta\rangle|^2~|1\rangle =|0\rangle]$\\
+$+ P[||\langle \alpha|0\rangle|^2~\langle x|\alpha\rangle + |\langle \beta|0\rangle|^2~\langle x|\beta\rangle|^2~|x\rangle + |\langle y| (|\langle \alpha|0\rangle|^2~|\alpha\rangle + |\langle \beta|0\rangle|^2~|\beta\rangle)|^2~|y\rangle =|x\rangle]$\\
 $+ P[|\langle x| (|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|x\rangle + |\langle y| (|\langle \alpha|x\rangle|^2~|\alpha\rangle + |\langle \beta|x\rangle|^2~|\beta\rangle)|^2~|y\rangle =|x\rangle])$\\
 
 
