@@ -32,5 +32,36 @@
 
 \newpage
 \section*{Aufgabe 4}
+\begin{enumerate}[a)]
+\item
+
+\item
+
+\item
+
+\item
+
+\item
+
+\item
+Algorithmus:\\
+\begin{enumerate}[1.]
+\item Wähle $a\in_R \mathbb{Z}_N^*$ uniform
+\item Berechne \texttt{PERIODE}($N,a$) und erhalte so $t =$ ord$_{\mathbb{Z}_N^*}(a)$ mit $t=2^s\cdot u$
+\item Berechne $\frac{a^t}{a^2}+1=x$
+\item Berechne ggT($N, x$)$=p$
+\item Falls gilt: $p | N$ gebe $p$ aus, sonst gehe zu Schritt 1
+\end{enumerate}
+
+Korrektheit:
+$x=\frac{a^t}{a}+1= \frac{a^{2^s\cdot u}}{a^2}+1= a^{2^{s-1}\cdot u}+1$\\
+Es filt mit Ws $\geq \frac{1}{4}$ dass ggT($N, x$)$=p$ ein nicht-trivialer Teiler von $N$ ist und das somit gilt $p|N$
+
+Laufzeit:
+
+
+
+\end{enumerate}
+
 
 \end{document}
