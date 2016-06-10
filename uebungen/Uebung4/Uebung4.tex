@@ -86,7 +86,14 @@ $\prod_{i=0}^{2}(1-2^{i-4}) = (1-2^{-4})(1-2^{-3})(1-2^{-2})=\frac{315}{512}\app
 
 \item
 
-\item
+\item Wie bereits in d) gezeigt, gilt: $a^{2^{s_i-1}u}$ mod $ p_i=-1$, falls $s_i\geq 1$\\
+Fall 1: $s_i=s$\\
+$\Rightarrow a^{2^{s-1}u} = a^{2^{s_i-1}u}=-1$ mod $p_i$\\
+Fall 2: $s_i < s \Rightarrow s = s_i+k$, mit $k\geq 1$\\
+$\Rightarrow a^{2^{s-1}u} = -1$ mod $p_i$, falls $s_i=s$\\\\
+$\Rightarrow a^{2^{s-1}u} = a^{2^{s_i+k-1}u}=a^{2^{s_i-1}2^ku} = (a^{2^{s_i-1}u})^{2^k} = (-1)^{2^k} = 1^{2^{k-1}}= 1$ mod $p_i$\\
+$\Rightarrow a^{2^{s-1}u} = 1$ mod $p_i$, falls $s_i<s$
+\item 
 
 \item
 Algorithmus:\\
@@ -100,7 +107,8 @@ Algorithmus:\\
 
 Korrektheit:
 $x=\frac{a^t}{a}+1= \frac{a^{2^s\cdot u}}{a^2}+1= a^{2^{s-1}\cdot u}+1$\\
-Es filt mit Ws $\geq \frac{1}{4}$ dass ggT($N, x$)$=p$ ein nicht-trivialer Teiler von $N$ ist und das somit gilt $p|N$
+Es gilt mit Ws $\geq \frac{1}{4}$ dass ggT($N, x$)$=p$ ein nicht-trivialer Teiler von $N$ ist und das somit gilt $p|N$
+Bei dem zweifachen durchlaufen von den Schritten 1-4 ist die Wahrscheinlichkeit einen nicht-trivialen Teiler gefunden zu haben schon bei $1-(\frac{3}{4})^2=0,4375=43,75 \%$
 
 Laufzeit:
 
