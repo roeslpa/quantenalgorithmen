@@ -69,7 +69,7 @@ s_4 \\
 \end{pmatrix}$ \\
 $\Rightarrow (s_1, s_2, s_3, s_4) = (1, 1, 1, 1) \vee (s_1, s_2, s_3, s_4) = (0, 0, 0, 0)$
 \item $Pr[n-1$ Vektoren aus $\mathbb{F}_2^n$ sind linear unabhängig$] $\\
-$=\prod_{i=1}^{n-1} Pr[$Vektoren $y_1$ bis $y_i$ sind l.u.$]$\\
+$=\prod_{i=1}^{n-1} Pr[y_{i}\neq 0^n \wedge y_{i}$ ist l.u. von $y_1$ bis $y_{i-1}]$\\
 $=\prod_{i=0}^{n-2} Pr[y_{i+1}\neq 0^n \wedge y_{i+1}$ ist l.u. von $y_1$ bis $y_i]$\\
 $=\prod_{i=0}^{n-2} Pr[y_{i+1}\neq 0^n \wedge y_{i+1} \notin \{y_1,..,y_i\} \wedge y_{i+1}$ ist nicht Summe zweier oder mehr ungleicher Summanden aus $\{y_1,..,y_i\}]$\\
 $=\prod_{i=0}^{n-2} \frac{2^n-1-i-{i \choose 2}-{i \choose 3}-..-{i \choose i}}{2^n} =\prod_{i=0}^{n-2} \frac{2^n - \sum_{j=0}^i{i \choose j}}{2^n} = \prod_{i=0}^{n-2} \frac{2^n - 2^i}{2^n}= \prod_{i=0}^{n-2} (\frac{2^n}{2^n}-\frac{2^i}{2^n})= \prod_{i=0}^{n-2} (1-2^{i-n})$\\
