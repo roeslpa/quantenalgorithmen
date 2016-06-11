@@ -74,6 +74,14 @@ $\prod_{i=0}^{2}(1-2^{i-4}) = (1-2^{-4})(1-2^{-3})(1-2^{-2})=\frac{315}{512}\app
 
 \newpage
 \section*{Aufgabe 3}
+Da $S_u=\{\wedge, \neg, c\}$ universell ist, kann insbesondere jede reversible Funktion mittels $S_u$ dargestellt werden. Es genügt daher, jedes Element als Verknüpfung von $T$, Hilfsvariablen und $0$, $1$ zu
+schreiben (s. Script).\\
+Sei $S_q' = \{T_{\wedge},T_{\neg},T_{c}\}$ das r-reversible Pendant zu $S_u$ mit dem gezeigt wird, dass $S_q = \{T\}$ r-reversibel ist.\\
+$T_{\wedge} = T(x_1,x_2,0) = (x_1,x_2,x_1x_2)$\\
+$T_{\neg} = T(x_1,1,1) = (x_1,1,1+x_1) = (x_1,1,-x_1)$\\
+$T_{c} = T(x_1,1,0) = (x_1,1,x_1)$\\
+$S_u=\{\wedge, \neg, c\}$ kann also durch $S_q' = \{T_{\wedge},T_{\neg},T_{c}\}$ dargestellt werden, wobei lediglich das Toffoli-Gate $T$ und $0$, $1$ verwendet werden. Daraus folgt, dass $S_q = \{T\}$ r-reversibel ist.
+
 
 \newpage
 \section*{Aufgabe 4}
