@@ -111,7 +111,7 @@ $S_u=\{\wedge, \neg, c\}$ kann also durch $S_q' = \{T_{\wedge},T_{\neg},T_{c}\}$
 
 \item $s_i = r_i$ gilt gdw. $a$ ein quadratischer Rest modulo $p_i$ ist.\\
  Da $a$ uniform aus $\mathbb{Z}_N^*$ gezogen wird, gilt für jedes $i$ unabhängig: $a\in_R\mathbb{Z}_{p_i}^*$\\
-Ausserdem gilt für $\mathbb{QR}=\{x\in \mathbb{Z}_{p_i}^*|x$ ist Quadratischer Rest modulo $p_i\}$: $|\mathbb{QR}|=\frac{|\mathbb{Z}_N^*|}{2}$. Dies liegt daran das $x \rightarrow x^2$ eine $2$ zu $1$ Abbildung ist ($x^2=(-x)^2$).\\
+Ausserdem gilt für $\mathbb{QR}=\{x\in \mathbb{Z}_{p_i}^*|x$ ist Quadratischer Rest modulo $p_i\}$: $|\mathbb{QR}|=\frac{|\mathbb{Z}_N^*|}{2}$. Dies liegt daran, dass $x \rightarrow x^2$ eine $2$ zu $1$ Abbildung ist ($x^2=(-x)^2$).\\
 Somit gilt Ws[$a$ ist quadratischer Rest modulo $p_i$]$=\frac{1}{2}$, $\forall a\in_R\mathbb{Z}_N^*$
 
 \item 
@@ -130,19 +130,18 @@ $\Rightarrow a^{2^{s-1}u} = 1$ mod $p_i$, falls $s_i<s$
 
 \item
 Falls gilt: $a^{2^{s-1}u}$ mod $p_i=-1 \Rightarrow a^{2^{s-1}u}+1=K\cdot p_i$, für ein $K\in \mathbb{Z}$\\
-Fall 1: $K$ teilt nicht $N$\\
+Fall 1: ggt$(N,K)=1$\\
 $\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = p_i$, also ein nicht-trivialer Teiler von $N$.\\\\
 
-Fall 2: $K$ teilt $N$, aber $K<p_i$\\
-$\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = p_i$, also ein nicht-trivialer Teiler von $N$. \\\\
- 
-Fall 3:  $K$ teilt $N$, und $K>p_i$\\
-$\Rightarrow K= p_{j_1}\cdot ... \cdot p_{j_n}$, für $j_i\in \{1, ..., k\}$, $\forall i$\\
-Also $K$ ist zusammengesetzt aus anderen nicht-trivialen Teilern von $N$.\\
-$\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = K$, also ein nicht-trivialer Teiler von $N$. \\\\
+Fall 2: ggt$(N, K)=q$, aber $p_i$ teilt nicht $K$\\
 
-TODO:
-Beweisen, dass $a^{2^{s-1}u}$ mod $p_i=-1$ mit WS $\geq \frac{1}{4}$
+$\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = p_i \cdot q$, also ein nicht-trivialer Teiler von $N$. \\\\
+ 
+Fall 3:  ggt$(N,K)=q$ und $p_i$ teilt $K \Rightarrow p_i$ teilt $q$ \\
+$\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = q$, also ein nicht-trivialer Teiler von $N$. \\\\
+
+$\Rightarrow$ wenn $a^{2^{s-1}u}$ mod $p_i=-1$, ist ggt$(N, a^{2^{s-1}u})$ ein nicht-trivialer Teiler.\\
+
 
 
 \item
