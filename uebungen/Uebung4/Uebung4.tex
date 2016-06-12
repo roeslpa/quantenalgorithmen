@@ -116,7 +116,15 @@ Daraus folgt, dass $t\geq kgV(t_1,..,t_k)$
 Ausserdem gilt für $\mathbb{QR}=\{x\in \mathbb{Z}_{p_i}^*|x$ ist Quadratischer Rest modulo $p_i\}$: $|\mathbb{QR}|=\frac{|\mathbb{Z}_N^*|}{2}$. Dies liegt daran, dass $x \rightarrow x^2$ eine $2$ zu $1$ Abbildung ist ($x^2=(-x)^2$).\\
 Somit gilt Ws[$a$ ist quadratischer Rest modulo $p_i$]$=\frac{1}{2}$, $\forall a\in_R\mathbb{Z}_N^*$
 
-\item 
+\item Fall 1: $r_j=r_i$\\
+Ws[$s_i\neq s_j$]$\geq$Ws[$s_i = r_i \wedge s_j \neq r_j$]$=\frac{1}{2}\cdot \frac{1}{2}= \frac{1}{4}$\\\\
+
+Fall 2: $r_j \neq r_i$\\
+Ws[$s_i\neq s_j$]$\geq$Ws[$s_i = r_i \wedge s_j = r_j$]$=\frac{1}{2}\cdot \frac{1}{2}=\frac{1}{4}$\\\\
+
+Insgesamt:\\
+Ws[$s_i \neq s_j$]$=$ Ws[$s_i \neq s_j$| $r_j=r_i$]Ws[$r_j=r_i$]+  Ws[$s_i \neq s_j$|$r_j \neq r_i$]Ws[$r_j \neq r_i$]$ \geq\frac{1}{4}$Ws[$r_j=r_i$]$+ \frac{1}{4}\cdot (1-$Ws[$r_j=r_i$]$)=\frac{1}{4}($Ws[$r_j=r_i$]$+1-$Ws[$r_j=r_i$]$)=\frac{1}{4}$\\
+$\Rightarrow$ Ws[$s_i \neq s_j$]$\geq \frac{1}{4}$
 
 \item $a^{2^{s_i-1}u}= a^{\frac{2^{s}u}{2}}$ mod $p_i$\\
 Es gilt: ord$_{\mathbb{Z}_N^*}(a)=t=2^{s}u$ und ord$_{\mathbb{Z}_{p_i}^*}(a)=t_i=2^{s_i}u_i$\\
