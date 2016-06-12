@@ -13,6 +13,7 @@
 \usepackage{enumerate}
 \usepackage[a4paper, total={19cm, 23cm}]{geometry}
 \usepackage{stmaryrd}
+\usepackage{esvect}
 \usepackage{graphicx}
 \pagestyle{scrheadings}
 \pagenumbering{gobble}
@@ -23,6 +24,20 @@
 \begin{document}
 
 \section*{Aufgabe 1}
+\begin{figure}[htp] \centering{
+\includegraphics[scale=0.5]{ue4a1q.pdf}}
+\caption{Quantenschaltkreis Q entspricht dem Schaltkreis aus Präsenzübung 4 Aufgabe 4}
+\label{p4a4}
+\end{figure}
+Gesucht ist ein Schaltkreis, welcher die reversieble Einbettung $U_f$ $|\vv{x}y\rangle \xrightarrow{} |\vv{x}\rangle \bigotimes |f(\vv{x}) \oplus y \rangle$ berechnet.
+Ein Bestandteild des Schaltkreises darf das Quantengate Q sein, welches dem Schaltkreis aus Aufgabe 4 der Präsenzübung 4 entspircht (Abb. \ref{p4a4}).
+Das $U_f$ dieser Aufgabe entspricht dabei dem $U_f$ der Präsenzaufgabe.
+Um nun aus Q das Gate $U_f$ zu erhalten muss jeweils die Auswirkung des Gates $W_2$ auf $|y\rangle$ ausgeglichen werden. Dazu kann man die Eigenschaft von $W_2$ nutzen, dass $|y\rangle \xrightarrow{W_2} \xrightarrow{W_2} |y\rangle$ ist.
+\begin{figure}[htp] \centering{
+\includegraphics[scale=0.5]{ue4a1q2.pdf}}
+\caption{Schaltkreis aus $W_2$ und Q um $U_f$ zu selektieren}
+\end{figure}\\
+Das voran und nachstellen von $W_2$ auf $|y\rangle$ sorgt nun dafür, dass auf $|\vv{x}y\rangle$ nur $U_f$ wirkt und das der gesuchten Schaltung entspricht.
 
 \newpage
 \section*{Aufgabe 2}
@@ -109,7 +124,7 @@ Fall 2: $s_i < s \Rightarrow s = s_i+k$, mit $k\geq 1$\\
 $\Rightarrow a^{2^{s-1}u} = -1$ mod $p_i$, falls $s_i=s$\\\\
 $\Rightarrow a^{2^{s-1}u} = a^{2^{s_i+k-1}u}=a^{2^{s_i-1}2^ku} = (a^{2^{s_i-1}u})^{2^k} = (-1)^{2^k} = 1^{2^{k-1}}= 1$ mod $p_i$\\
 $\Rightarrow a^{2^{s-1}u} = 1$ mod $p_i$, falls $s_i<s$
-\item 
+\item
 
 \item
 Algorithmus:\\
