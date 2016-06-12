@@ -116,7 +116,9 @@ Somit gilt Ws[$a$ ist quadratischer Rest modulo $p_i$]$=\frac{1}{2}$, $\forall a
 
 \item 
 
-\item
+\item $a^{2^{s-1}u}= a^{\frac{2^{s}u}{2}}$ mod $p_i$\\
+Es gilt: ord$_{\mathbb{Z}_N^*}(a)=t=2^{s-1}u$ und ord$_{\mathbb{Z}_{p_i}^*}(a)=t=2^{s_i-1}u_i$\\
+Wie in a) gezeigt, gilt $t=$ kgV$(t_1,...,t_k)$ und somit auch $s=$ max$\{s_1, ...,s_k\}$
 
 \item Wie bereits in d) gezeigt, gilt: $a^{2^{s_i-1}u}$ mod $ p_i=-1$, falls $s_i\geq 1$\\
 Fall 1: $s_i=s$\\
@@ -125,7 +127,8 @@ $\Rightarrow a^{2^{s-1}u} = -1$ mod $p_i$, falls $s_i=s$\\\\
 
 Fall 2: $s_i < s \Rightarrow s = s_i+k$, mit $k\geq 1$\\
 $\Rightarrow a^{2^{s-1}u} = a^{2^{s_i+k-1}u}=a^{2^{s_i-1}2^ku} = (a^{2^{s_i-1}u})^{2^k} = (-1)^{2^k} = 1^{2^{k-1}}= 1$ mod $p_i$\\
-$\Rightarrow a^{2^{s-1}u} = 1$ mod $p_i$, falls $s_i<s$
+$\Rightarrow a^{2^{s-1}u} = 1$ mod $p_i$, falls $s_i<s$. Daraus folgt auch: $u_i$ teilt $u$, da beide Zahlen ungerade sind und somit nicht in $2^{s_i}$ bzw. $2^s$ enthalten sind.\\
+
 
 
 \item
@@ -140,7 +143,10 @@ $\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = p_i \cdot q$, also ein nicht-trivialer T
 Fall 3:  ggt$(N,K)=q$ und $p_i$ teilt $K \Rightarrow p_i$ teilt $q$ \\
 $\Rightarrow$ ggt$(N, a^{2^{s-1}u}+1) = q$, also ein nicht-trivialer Teiler von $N$. \\\\
 
-$\Rightarrow$ wenn $a^{2^{s-1}u}$ mod $p_i=-1$, ist ggt$(N, a^{2^{s-1}u})$ ein nicht-trivialer Teiler.\\
+$\Rightarrow$ wenn $\exists i$, mit $a^{2^{s-1}u}$ mod $p_i=-1$, gilt ggt$(N, a^{2^{s-1}u})$ ist ein nicht-trivialer Teiler.\\
+Dieser Fall tritt genau dann ein, wenn es ein $j$ gibt mit $s_j\geq 1$, denn dann gibt es ein $i$ mit $s_i=$ max$\{s_1, ..., s_k\}=s\geq 1$ und es gilt $a^{2^{s_i-1}u} =-1 = a^{2^{s-1}u}$ mod $p_i$.
+Ws[$ s\geq 1$]$=$Ws[$\exists i \neq j$ mit $s_i \neq s_j$]$\geq\frac{1}{4}$ (siehe c))\\
+$\Rightarrow$ Mit Ws $\frac{1}{4}$ ist ggt$(N, a^{2^{s-1}u})$ ein nicht-trivialer Teiler.
 
 
 
