@@ -118,14 +118,14 @@ Somit gilt Ws[$a$ ist quadratischer Rest modulo $p_i$]$=\frac{1}{2}$, $\forall a
 
 \item 
 
-\item $a^{2^{s-1}u}= a^{\frac{2^{s}u}{2}}$ mod $p_i$\\
+\item $a^{2^{s_i-1}u}= a^{\frac{2^{s}u}{2}}$ mod $p_i$\\
 Es gilt: ord$_{\mathbb{Z}_N^*}(a)=t=2^{s}u$ und ord$_{\mathbb{Z}_{p_i}^*}(a)=t_i=2^{s_i}u_i$\\
 Wie in a) gezeigt, gilt $t=$ kgV$(t_1,...,t_k)$ und somit auch $s=$ max$\{s_1, ...,s_k\}$\\
 Daraus folgt, das $u_i$ $u$ teilt, denn $t_i$ teilt $t$\\
 $\Rightarrow u_i \cdot K = u$ für $K$ ungerade\\
-$\Rightarrow a^{\frac{2^{s_i}u_i\cdot K}{2}}$ mod $p_i$ Es gilt: $t_i = $ ord$(a)$ mod $p_i$:\\
+$\Rightarrow a^{2^{s_i-1}u}=a^{\frac{2^{s_i}u_i\cdot K}{2}}$ mod $p_i$ Es gilt: $t_i = $ ord$(a)$ mod $p_i$:\\
 $\Rightarrow 1^{\frac{K}{2}} = 1^{\frac{1}{2}}$ mod $p_i$ Hierfür gibt es nur 2 Lösungen: $1$ und $-1$\\
-In diesem Fall bleibt jedoch nur die Lösung $a^{2^{s-1}u}= -1$ mod $p_i$, da $a^{\frac{2^{s_i-1}u_i}{2}}$ nicht 1 sein kann, da $\frac{2^{s_i-1}u_i}{2} < t_i =$ ord$(a)$ mod $p_i$ 
+In diesem Fall bleibt jedoch nur die Lösung $a^{2^{s-1}u}= -1$ mod $p_i$, da $a^{\frac{2^{s_i-1}u_i}{2}}$ nicht 1 sein kann, da $\frac{2^{s_i-1}u_i}{2} < t_i =$ ord$(a)$ mod $p_i$, also muss gelten $a^{\frac{2^{s_i-1}u_i}{2}}=-1$ und weil $K$ ungerade ist, kann auch $a^{\frac{2^{s_i-1}u_i}{2}^K}$ nicht 1 werden.
 
 \item Wie bereits in d) gezeigt, gilt: $a^{2^{s_i-1}u}$ mod $ p_i=-1$, falls $s_i\geq 1$\\
 Fall 1: $s_i=s$\\
