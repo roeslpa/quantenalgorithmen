@@ -74,8 +74,8 @@ $CR_2^{-1}=
 
 $QFT_8^{-1}=(H\bigotimes I_2)(CR_2^{-1}\bigotimes I_1)(I_1\bigotimes H \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes CR_2^{-1})(I_2 \bigotimes H)$\\
 $=((H\bigotimes I_1)CR_2^{-1}(I_1\bigotimes H)) \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes (CR_2^{-1}(I_1 \bigotimes H))$\\
-$=(\begin{pmatrix} 1&1&1&1\\ 1&-1&\alpha_2&-\alpha_2\\ 1&1&-1&-1\\ 1&-1&-\alpha_2&\alpha_2\\\end{pmatrix} \bigotimes I_1) CR_3^{-1}(I_1 \bigotimes \begin{pmatrix}1&1&0&0\\ 1&-1&0&0\\ 0&0&1&1\\ 0&0&\alpha_2&-\alpha_2\\ \end{pmatrix})$\\
-$=\begin{pmatrix}
+$=\frac{1}{\sqrt{2^3}}(\begin{pmatrix} 1&1&1&1\\ 1&-1&\alpha_2&-\alpha_2\\ 1&1&-1&-1\\ 1&-1&-\alpha_2&\alpha_2\\\end{pmatrix} \bigotimes I_1) CR_3^{-1}(I_1 \bigotimes \begin{pmatrix}1&1&0&0\\ 1&-1&0&0\\ 0&0&1&1\\ 0&0&\alpha_2&-\alpha_2\\ \end{pmatrix})$\\
+$=\frac{1}{\sqrt{2^3}}\begin{pmatrix}
 1&0&1&0&1&0&1&0\\
 0&1&0&1&0&1&0&1\\
 1&0&-1&0&\alpha_2&0&-\alpha_2&0\\
@@ -101,6 +101,15 @@ CR_3^{-1}
 
 \newpage
 \section*{Aufgabe 3}
+\begin{figure}[htp] \centering{
+\includegraphics[scale=0.5]{A53.pdf}}
+\caption{Quantenschaltkreis für QFT$_{4}^{-1}$}
+\end{figure}
+
+$|z\rangle = \frac{1}{2} (|0\rangle + |1\rangle - |2\rangle - |3\rangle) = \frac{1}{2} \begin{pmatrix} 1\\1\\-1\\-1\\\end{pmatrix} = \frac{1}{2} \begin{pmatrix} 1\\-1\\\end{pmatrix} \bigotimes \begin{pmatrix} 1\\1\\\end{pmatrix}$\\
+$\xrightarrow{H\bigotimes I_1} \frac{1}{\sqrt{2}} \begin{pmatrix} 0\\1\\\end{pmatrix} \bigotimes \begin{pmatrix} 1\\1\\\end{pmatrix}$\\
+$\xrightarrow{CR_2^{-1}}\frac{1}{\sqrt{2}} \begin{pmatrix} 0\\1\\\end{pmatrix} \bigotimes \begin{pmatrix} 1\\-i\\\end{pmatrix}$\\
+$\xrightarrow{I_1\bigotimes H} \frac{1}{2} \begin{pmatrix} 0\\1\\\end{pmatrix} \bigotimes \begin{pmatrix} 1-i\\1+i\\\end{pmatrix} = \frac{1}{2}\begin{pmatrix} 0\\0\\1-i\\1+i\\\end{pmatrix} = \frac{1}{2} ((1-i)|2\rangle + (1+i)|3\rangle)$\\
 
 \newpage
 \section*{Aufgabe 4}
