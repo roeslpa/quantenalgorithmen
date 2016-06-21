@@ -33,19 +33,13 @@ $R_2, R_3:$\\
 $R_2=F_{2\pi 2^{-2}}=F_{\frac{\pi}{2}} = 
 \begin{pmatrix}
 1 & 0 \\ 0 & e^{\frac{i \pi}{2}} \\
-\end{pmatrix} = 
-\begin{pmatrix}
-1 & 0 \\ 0 & cos(\frac{\pi}{2})+i~sin(\frac{\pi}{2})\\
 \end{pmatrix} = \begin{pmatrix}
 1 & 0 \\ 0 & i\\
 \end{pmatrix}$\\
 $R_3=F_{\frac{\pi}{4}} = 
 \begin{pmatrix}
 1 & 0 \\ 0 & e^{\frac{i \pi}{4}} \\
-\end{pmatrix} = 
-\begin{pmatrix}
-1 & 0 \\ 0 & cos(\frac{\pi}{4})+i~sin(\frac{\pi}{4})\\
-\end{pmatrix}= \begin{pmatrix}
+\end{pmatrix} = \begin{pmatrix}
 1 & 0 \\ 0 & \frac{1+i}{\sqrt{2}}\\
 \end{pmatrix}$ \\
 Eigentlich werden kontrollierte $R_k^{-1}$ für die QFT$_{2^n}^{-1}$ benötigt.
@@ -59,7 +53,7 @@ Eigentlich werden kontrollierte $R_k^{-1}$ für die QFT$_{2^n}^{-1}$ benötigt.
 
 \item Die Matrizen der folgenden unitären Abbildungen sind bekannt oder können wie folgt berechnet werden:\\
 $H=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1\\ 1 & -1\\\end{pmatrix}$\\
-$R_k^{-1}=(R_k^{*})^T=\begin{pmatrix} 1 & 0\\ 0 & cos(\frac{\pi}{2^{k-1}})-i~sin(\frac{\pi}{2^{k-1}})\\\end{pmatrix}$ da unitäre Abbildung.\\
+$R_k^{-1}=(R_k^{*})^T=\begin{pmatrix} 1 & 0\\ 0 & e^{\frac{i \pi}{2^{k-1}}}\\\end{pmatrix}$ da unitäre Abbildung.\\
 Kontrolliertes $R_k^{-1}$ nach gleichem Schema wie $CNOT$:\\
 $CR_2^{-1}=
 \begin{pmatrix} 1 & 0 & 0 & 0\\
