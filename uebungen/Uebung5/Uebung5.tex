@@ -53,6 +53,49 @@ Eigentlich werden kontrollierte $R_k^{-1}$ für die QFT$_{2^n}^{-1}$ benötigt.
 \caption{Quantenschaltkreis für QFT$_{8}^{-1}$}
 \end{figure}
 
+\item Die Matrizen der folgenden unitären Abbildungen sind bekannt oder können wie folgt berechnet werden:\\
+$H=\frac{1}{\sqrt{2}}\begin{pmatrix} 1 & 1\\ 1 & -1\\\end{pmatrix}$\\
+$R_k^{-1}=(R_k^{*})^T=\begin{pmatrix} 1 & 0\\ 0 & cos(\frac{\pi}{2^{k-1}})-i~sin(\frac{\pi}{2^{k-1}})\\\end{pmatrix}$ da unitäre Abbildung.\\
+Kontrolliertes $R_k^{-1}$ nach gleichem Schema wie $CNOT$:\\
+$CR_2^{-1}=
+\begin{pmatrix} 1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+0 & 0 & 0 & \alpha_2\\\end{pmatrix}, CR_3^{-1}=
+\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & \alpha_3 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \alpha_3\\\end{pmatrix}, \alpha_k = cos(\frac{\pi}{2^{k-1}})-i~sin(\frac{\pi}{2^{k-1}})$\\
+
+$QFT_8^{-1}=(H\bigotimes I_2)(CR_2^{-1}\bigotimes I_1)(I_1\bigotimes H \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes CR_2^{-1})(I_2 \bigotimes H)$\\
+$=((H\bigotimes I_1)CR_2^{-1}(I_1\bigotimes H)) \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes (CR_2^{-1}(I_1 \bigotimes H))$\\
+$=(\begin{pmatrix} 1&1&1&1\\ 1&-1&\alpha_2&-\alpha_2\\ 1&1&-1&-1\\ 1&-1&-\alpha_2&\alpha_2\\\end{pmatrix} \bigotimes I_1) CR_3^{-1}(I_1 \bigotimes \begin{pmatrix}1&1&0&0\\ 1&-1&0&0\\ 0&0&1&1\\ 0&0&\alpha_2&-\alpha_2\\ \end{pmatrix})$\\
+$=\begin{pmatrix}
+1&0&1&0&1&0&1&0\\
+0&1&0&1&0&1&0&1\\
+1&0&-1&0&\alpha_2&0&-\alpha_2&0\\
+0&1&0&-1&0&\alpha_2&0&-\alpha_2\\
+1&0&1&0&-1&0&-1&0\\
+0&1&0&1&0&-1&0&-1\\
+1&0&-1&0&-\alpha_2&0&\alpha_2&0\\
+0&1&0&-1&0&-\alpha_2&0&\alpha_2\\
+\end{pmatrix}
+CR_3^{-1}
+\begin{pmatrix}
+1&1&0&0&0&0&0&0\\
+1&-1&0&0&0&0&0&0\\
+0&0&1&1&0&0&0&0\\
+0&0&\alpha_2&-\alpha_2&0&0&0&0\\
+0&0&0&0&1&1&0&0\\
+0&0&0&0&1&-1&0&0\\
+0&0&0&0&0&0&1&1\\
+0&0&0&0&0&0&\alpha_2&-\alpha_2\\
+\end{pmatrix}$\\
 
 \end{enumerate}
 
