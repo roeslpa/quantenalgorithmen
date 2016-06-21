@@ -36,13 +36,17 @@ $R_2=F_{2\pi 2^{-2}}=F_{\frac{\pi}{2}} =
 \end{pmatrix} = 
 \begin{pmatrix}
 1 & 0 \\ 0 & cos(\frac{\pi}{2})+i~sin(\frac{\pi}{2})\\
-\end{pmatrix}$ \\
+\end{pmatrix} = \begin{pmatrix}
+1 & 0 \\ 0 & i\\
+\end{pmatrix}$\\
 $R_3=F_{\frac{\pi}{4}} = 
 \begin{pmatrix}
 1 & 0 \\ 0 & e^{\frac{i \pi}{4}} \\
 \end{pmatrix} = 
 \begin{pmatrix}
 1 & 0 \\ 0 & cos(\frac{\pi}{4})+i~sin(\frac{\pi}{4})\\
+\end{pmatrix}= \begin{pmatrix}
+1 & 0 \\ 0 & \frac{1+i}{\sqrt{2}}\\
 \end{pmatrix}$ \\
 Eigentlich werden kontrollierte $R_k^{-1}$ für die QFT$_{2^n}^{-1}$ benötigt.
 
@@ -61,40 +65,40 @@ $CR_2^{-1}=
 \begin{pmatrix} 1 & 0 & 0 & 0\\
 0 & 1 & 0 & 0\\
 0 & 0 & 1 & 0\\
-0 & 0 & 0 & \alpha_2\\\end{pmatrix}, CR_3^{-1}=
+0 & 0 & 0 & -i\\\end{pmatrix}, CR_3^{-1}=
 \begin{pmatrix}
 1 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 1 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 1 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 1 & 0 & 0 & 0\\
-0 & 0 & 0 & 0 & 0 & \alpha_3 & 0 & 0\\
+0 & 0 & 0 & 0 & 0 & \frac{1-i}{\sqrt{2}} & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0 & 1 & 0\\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & \alpha_3\\\end{pmatrix}, \alpha_k = cos(\frac{\pi}{2^{k-1}})-i~sin(\frac{\pi}{2^{k-1}})$\\
+0 & 0 & 0 & 0 & 0 & 0 & 0 & \frac{1-i}{\sqrt{2}}\\\end{pmatrix}$\\
 
 $QFT_8^{-1}=(H\bigotimes I_2)(CR_2^{-1}\bigotimes I_1)(I_1\bigotimes H \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes CR_2^{-1})(I_2 \bigotimes H)$\\
 $=((H\bigotimes I_1)CR_2^{-1}(I_1\bigotimes H)) \bigotimes I_1)CR_3^{-1}(I_1 \bigotimes (CR_2^{-1}(I_1 \bigotimes H))$\\
-$=\frac{1}{\sqrt{2^3}}(\begin{pmatrix} 1&1&1&1\\ 1&-1&\alpha_2&-\alpha_2\\ 1&1&-1&-1\\ 1&-1&-\alpha_2&\alpha_2\\\end{pmatrix} \bigotimes I_1) CR_3^{-1}(I_1 \bigotimes \begin{pmatrix}1&1&0&0\\ 1&-1&0&0\\ 0&0&1&1\\ 0&0&\alpha_2&-\alpha_2\\ \end{pmatrix})$\\
+$=\frac{1}{\sqrt{2^3}}(\begin{pmatrix} 1&1&1&1\\ 1&-1&-i&i\\ 1&1&-1&-1\\ 1&-1&i&-i\\\end{pmatrix} \bigotimes I_1) CR_3^{-1}(I_1 \bigotimes \begin{pmatrix}1&1&0&0\\ 1&-1&0&0\\ 0&0&1&1\\ 0&0&-i&i\\ \end{pmatrix})$\\
 $=\frac{1}{\sqrt{2^3}}\begin{pmatrix}
 1&0&1&0&1&0&1&0\\
 0&1&0&1&0&1&0&1\\
-1&0&-1&0&\alpha_2&0&-\alpha_2&0\\
-0&1&0&-1&0&\alpha_2&0&-\alpha_2\\
+1&0&-1&0&-i&0&i&0\\
+0&1&0&-1&0&-i&0&i\\
 1&0&1&0&-1&0&-1&0\\
 0&1&0&1&0&-1&0&-1\\
-1&0&-1&0&-\alpha_2&0&\alpha_2&0\\
-0&1&0&-1&0&-\alpha_2&0&\alpha_2\\
+1&0&-1&0&i&0&-i&0\\
+0&1&0&-1&0&i&0&-i\\
 \end{pmatrix}
 CR_3^{-1}
 \begin{pmatrix}
 1&1&0&0&0&0&0&0\\
 1&-1&0&0&0&0&0&0\\
 0&0&1&1&0&0&0&0\\
-0&0&\alpha_2&-\alpha_2&0&0&0&0\\
+0&0&-i&i&0&0&0&0\\
 0&0&0&0&1&1&0&0\\
 0&0&0&0&1&-1&0&0\\
 0&0&0&0&0&0&1&1\\
-0&0&0&0&0&0&\alpha_2&-\alpha_2\\
+0&0&0&0&0&0&-i&i\\
 \end{pmatrix}$\\
 
 \end{enumerate}
