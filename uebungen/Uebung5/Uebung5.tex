@@ -121,12 +121,18 @@ $\xrightarrow{I_1\bigotimes H} \frac{1}{2} \begin{pmatrix} 0\\1\\\end{pmatrix} \
 \section*{Aufgabe 4}
 \begin{enumerate}[a)]
 \item Zeige: $|x_j|=|x_j'|$\\
-$\Leftrightarrow |\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}z_k e^{2\pi i \frac{jk}{N}}| = |\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}z_{k+b~mod~N} e^{2\pi i \frac{j(k+b~mod~N)}{N}}|$\\
+$\Leftrightarrow |\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}z_k e^{2\pi i \frac{jk}{N}}| = |\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}z_{k+b~mod~N} e^{2\pi i \frac{j(k+b~mod~N)}{N}}|$ (siehe A.1)\\
 Da $\frac{1}{\sqrt{N}}$ unabhängig von b und $|e^{ix}|=1$, gilt:\\
 $\Leftrightarrow |\sum_{k=0}^{N-1}z_k| = |\sum_{k=0}^{N-1}z_{k+b~mod~N}|$\\
 Da das jeweils die Summe über alle Amplituden $z_i, 0\leq i < N = 2^n$ ist, gilt diese Gleichheit.
 
-\item
+\item $|z'\rangle = \sum_{j=0}^{16-1} z_j' |j\rangle$ mit $z_0'=z_5'=z_{11}'=\frac{1}{\sqrt{3}},~z_k'=0~\forall 0<k<16 \wedge i\notin \{5,11\}$\\\\
+$QFT(|z'\rangle) =\frac{1}{\sqrt{16}}\sum_{j=0}^{15}\sum_{k=0}^{15}z_k e^{2\pi i \frac{jk}{16}} |j\rangle$\\
+$=\frac{1}{\sqrt{16}}\sum_{j=0}^{15} (\frac{1}{\sqrt{3}} e^{2\pi i \frac{j 0}{16}} + \frac{1}{\sqrt{3}} e^{2\pi i \frac{j 5}{16}} + \frac{1}{\sqrt{3}} e^{2\pi i \frac{j 11}{16}}) |j\rangle$\\
+$=\frac{1}{4\sqrt{3}}\sum_{j=0}^{15} (1 + e^{5\pi i \frac{j}{8}} + e^{11\pi i \frac{j}{8}}) |j\rangle$\\
+$\approx \frac{1}{4\sqrt{3}} (3 |0\rangle + 0,235 |1\rangle - 0,414 |2\rangle + 2,848|3\rangle + 1|4\rangle - 0,848|5\rangle + 2,414|6\rangle + 1,765|7\rangle - 1|8\rangle + 1,765|9\rangle + 1,414|10\rangle - 0,848|11\rangle + 1|12\rangle + 2,848|13\rangle - 0,414|14\rangle + 0,235|15\rangle )$\\\\
+$\Rightarrow |x\rangle=|0\rangle, |x\rangle=|3\rangle, |x\rangle=|13\rangle$ sind die drei wahrscheinlichsten Messergebnisse mit Wahrscheinlichkeiten $|x'_0|^2=|x_0|^2=\frac{3}{16},~|x_3|^2 = |x_{13}|^2\approx 0,169$
+
 \end{enumerate}
 
 \end{document}
