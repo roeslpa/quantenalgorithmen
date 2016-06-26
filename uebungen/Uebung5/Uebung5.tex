@@ -24,12 +24,13 @@
 \begin{document}
 
 \section*{Aufgabe 1}
-$|z\rangle = \sum_{j=0}^{N-1} z_j |j\rangle$ mit $N=8,~ z_k=\frac{1}{2}cos(\frac{2\pi k}{8}) = \frac{1}{2} \frac{1}{2} (e^{\frac{2\pi i k}{8}} - e^{-\frac{2\pi i k}{8}})=\frac{1}{4}(e^{\frac{2\pi i k}{8}} - e^{-\frac{2\pi i k}{8}})$\\\\
+$|z\rangle = \sum_{j=0}^{N-1} z_j |j\rangle$ mit $N=8,~ z_k=\frac{1}{2}cos(\frac{2\pi k}{8}) = \frac{1}{2} \frac{1}{2} (e^{\frac{2\pi i k}{8}} + e^{-\frac{2\pi i k}{8}})=\frac{1}{4}(e^{\frac{2\pi i k}{8}} + e^{-\frac{2\pi i k}{8}})$\\\\
 $QFT(|z\rangle) = \sum_{j=0}^{N-1}y_j |j\rangle$ mit $y_j=\frac{1}{\sqrt{N}}\sum_{k=0}^{N-1}z_k e^{2\pi i \frac{jk}{N}}$\\
 $=\frac{1}{\sqrt{N}}\sum_{j=0}^{N-1}\sum_{k=0}^{N-1}z_k e^{2\pi i \frac{jk}{N}} |j\rangle$\\\\
-$=\frac{1}{\sqrt{8}}\frac{1}{4}\sum_{j=0}^{7}\sum_{k=0}^{7}(e^{\frac{2\pi i k}{8}} - e^{-\frac{2\pi i k}{8}}) e^{j \frac{2\pi ik}{8}} |j\rangle$\\
-$=\frac{1}{4\sqrt{8}}\sum_{j=0}^{7}\sum_{k=0}^{7}(e^{(j+1)\frac{2\pi i k}{8}} - e^{(j-1)\frac{2\pi i k}{8}}) |j\rangle$ \\\\
-$=\frac{1}{4\sqrt{8}} ( 0 |0\rangle -8 |1\rangle + 0 |2\rangle + 0 |3\rangle + 0 |4\rangle+ 0|5\rangle+ 0|6\rangle+ 8|7\rangle)$
+$=\frac{1}{\sqrt{8}}\frac{1}{4}\sum_{j=0}^{7}\sum_{k=0}^{7}(e^{\frac{2\pi i k}{8}} + e^{-\frac{2\pi i k}{8}}) e^{j \frac{2\pi ik}{8}} |j\rangle$\\
+$=\frac{1}{4\sqrt{8}}\sum_{j=0}^{7}\sum_{k=0}^{7}(e^{(j+1)\frac{2\pi i k}{8}} + e^{(j-1)\frac{2\pi i k}{8}}) |j\rangle$ \\\\
+$=\frac{1}{4\sqrt{8}} ( 0 |0\rangle +8 |1\rangle + 0 |2\rangle + 0 |3\rangle + 0 |4\rangle+ 0|5\rangle+ 0|6\rangle+ 8|7\rangle)$\\
+$=\frac{2}{\sqrt{8}} (|1\rangle + |7\rangle)$\\
 
 
 \newpage
