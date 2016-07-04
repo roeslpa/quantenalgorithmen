@@ -25,8 +25,17 @@
 
 \section*{Aufgabe 1}
 \begin{enumerate}[a)]
-\item
-\item
+\item $ |\alpha \rangle \langle \beta | = \frac{1}{\sqrt{N-M}} \frac{1}{\sqrt{M}} \sum_{f(x')=0} |x'\rangle \sum_{f(x)=1} \langle x |$\\
+$=\frac{1}{\sqrt{N-M} \sqrt{M}} \sum_{x'\neq x} |x'\rangle \langle x | = 0$\\
+$\Rightarrow |\alpha \rangle$ und $| \beta \rangle$ sind orthogonal.
+
+\item $ | \psi \rangle = \frac{1}{\sqrt{N}} \sum_y |y\rangle = \frac{1}{\sqrt{N}} (\sum_{y: f(y) = 0} |y\rangle + \sum_{y: f(y) = 1} |y\rangle)$\\
+$= \frac{1}{\sqrt{N}} \sum_{f(x') = 0} |x'\rangle + \frac{1}{\sqrt{N}} \sum_{f(x) = 1} |x\rangle$\\
+$= \frac{1}{\sqrt{N}} \frac{\sqrt{N-M}}{\sqrt{N-M}} \sum_{f(x') = 0} |x'\rangle + \frac{1}{\sqrt{N}} \frac{\sqrt{M}}{\sqrt{M}} \sum_{f(x) = 1} |x\rangle$\\
+$= \frac{\sqrt{N-M}}{\sqrt{N}} (\frac{1}{\sqrt{N-M}} \sum_{f(x') = 0} |x'\rangle) + \frac{\sqrt{M}}{\sqrt{N}} (\frac{1}{\sqrt{M}} \sum_{f(x) = 1} |x\rangle)$\\
+$= \frac{\sqrt{N-M}}{\sqrt{N}} |\alpha \rangle + \frac{\sqrt{M}}{\sqrt{N}} |\beta \rangle$\\
+
+
 \item
 
 \end{enumerate}
