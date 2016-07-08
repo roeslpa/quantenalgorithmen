@@ -25,18 +25,24 @@
 
 \section*{Aufgabe 1}
 \begin{enumerate}[a)]
-\item $ |\alpha \rangle \langle \beta | = \frac{1}{\sqrt{N-M}} \frac{1}{\sqrt{M}} \sum_{f(x')=0} |x'\rangle \sum_{f(x)=1} \langle x |$\\
-$=\frac{1}{\sqrt{N-M} \sqrt{M}} \sum_{x'\neq x} |x'\rangle \langle x | = 0$\\
+\item $ \langle \alpha  | \beta \rangle  = \frac{1}{\sqrt{N-M}} \frac{1}{\sqrt{M}} \sum_{f(x')=0} \langle x' | \sum_{f(x)=1} | x \rangle$\\
+$=\frac{1}{\sqrt{N-M} \sqrt{M}} \sum_{x'\neq x} \langle x' | x \rangle = 0$\\
 $\Rightarrow |\alpha \rangle$ und $| \beta \rangle$ sind orthogonal.
 
 \item $ | \psi \rangle = \frac{1}{\sqrt{N}} \sum_y |y\rangle = \frac{1}{\sqrt{N}} (\sum_{y: f(y) = 0} |y\rangle + \sum_{y: f(y) = 1} |y\rangle)$\\
 $= \frac{1}{\sqrt{N}} \sum_{f(x') = 0} |x'\rangle + \frac{1}{\sqrt{N}} \sum_{f(x) = 1} |x\rangle$\\
 $= \frac{1}{\sqrt{N}} \frac{\sqrt{N-M}}{\sqrt{N-M}} \sum_{f(x') = 0} |x'\rangle + \frac{1}{\sqrt{N}} \frac{\sqrt{M}}{\sqrt{M}} \sum_{f(x) = 1} |x\rangle$\\
 $= \frac{\sqrt{N-M}}{\sqrt{N}} (\frac{1}{\sqrt{N-M}} \sum_{f(x') = 0} |x'\rangle) + \frac{\sqrt{M}}{\sqrt{N}} (\frac{1}{\sqrt{M}} \sum_{f(x) = 1} |x\rangle)$\\
-$= \frac{\sqrt{N-M}}{\sqrt{N}} |\alpha \rangle + \frac{\sqrt{M}}{\sqrt{N}} |\beta \rangle$\\
+$= \frac{\sqrt{N-M}}{\sqrt{N}} |\alpha \rangle + \frac{\sqrt{M}}{\sqrt{N}} |\beta \rangle = c_{\alpha} |\alpha \rangle + c_{\beta} |\beta \rangle$\\
 
+\item $WV | \psi \rangle = (-I_n +2 |\psi \rangle \langle \psi | ) ~ (I_n - 2 |\bar{a} \rangle \langle \bar{a}| ) ~ | \psi \rangle$ mit $|\bar{a} \rangle = |\beta \rangle$\\
+$= (-I_n +2 (c_{\alpha} |\alpha \rangle + c_{\beta} |\beta \rangle) (c_{\alpha} \langle \alpha| + c_{\beta} \langle \beta|) ) ~ (I_n - 2 | \beta \rangle \langle \beta| ) ~ | \psi \rangle$\\
+$= (-I_n +2 c_{\alpha}^2 |\alpha \rangle \langle \alpha| + 2 c_{\alpha} c_{\beta} ( |\alpha \rangle \langle \beta| + |\beta \rangle \langle \alpha|) + 2 c_{\beta}^2 |\beta \rangle \langle \beta| ) ~ (I_n - 2 | \beta \rangle \langle \beta| ) ~ | \psi \rangle$\\
+$= (-I_n +2 c_{\alpha}^2 |\alpha \rangle \langle \alpha| + 2c_{\alpha}c_{\beta} ( |\alpha \rangle \langle \beta| + |\beta \rangle \langle \alpha|) + 2c_{\beta}^2 |\beta \rangle \langle \beta| + 2 | \beta \rangle \langle \beta| - 4 c_{\alpha}c_{\beta} |\alpha \rangle \langle \beta| - 4 c_{\beta}^2 |\beta \rangle \langle \beta| ) ~ | \psi \rangle$\\
+$= 2(- \frac{1}{2}I_n + c_{\alpha}^2 |\alpha \rangle \langle \alpha| - c_{\alpha}c_{\beta} |\alpha \rangle \langle \beta| + c_{\alpha}c_{\beta} |\beta \rangle \langle \alpha| + (1 - c_{\beta}^2) |\beta \rangle \langle \beta|) ~ (c_{\alpha}^{(i)} |\alpha \rangle + c_{\beta}^{(i)} |\beta \rangle)$\\
+$= (- 1 + 2c_{\alpha}^2 c_{\alpha}^{(i)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i)}) |\alpha \rangle + (-1 + 2c_{\alpha}c_{\beta} c_{\alpha}^{(i)} + 2(1 - c_{\beta}^2) c_{\beta}^{(i)} ) |\beta \rangle$\\
 
-\item
+$\Rightarrow  \begin{pmatrix} c_{\alpha}^{(i+1)}\\ c_{\beta}^{(i+1)}\end{pmatrix} = G \begin{pmatrix} c_{\alpha}^{(i)}\\ c_{\beta}^{(i)}\end{pmatrix} = \begin{pmatrix}- 1 + 2c_{\alpha}^2 c_{\alpha}^{(i)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i)} \\ -1 + 2c_{\alpha}c_{\beta} c_{\alpha}^{(i)} + 2(1 - c_{\beta}^2) c_{\beta}^{(i)} \end{pmatrix}$
 
 \end{enumerate}
 
