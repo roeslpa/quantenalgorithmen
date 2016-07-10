@@ -39,18 +39,23 @@ $= \frac{\sqrt{N-M}}{\sqrt{N}} |\alpha \rangle + \frac{\sqrt{M}}{\sqrt{N}} |\bet
 $= (-I_n +2 (c_{\alpha} |\alpha \rangle + c_{\beta} |\beta \rangle) (c_{\alpha} \langle \alpha| + c_{\beta} \langle \beta|) ) ~ (I_n - 2 | \beta \rangle \langle \beta| ) ~ | \gamma^{(i-1)} \rangle$\\
 $= (-I_n +2 c_{\alpha}^2 |\alpha \rangle \langle \alpha| + 2 c_{\alpha} c_{\beta} ( |\alpha \rangle \langle \beta| + |\beta \rangle \langle \alpha|) + 2 c_{\beta}^2 |\beta \rangle \langle \beta| ) ~ (I_n - 2 | \beta \rangle \langle \beta| ) ~ | \gamma^{(i-1)} \rangle$\\
 $= (-I_n +2 c_{\alpha}^2 |\alpha \rangle \langle \alpha| + 2c_{\alpha}c_{\beta} ( |\alpha \rangle \langle \beta| + |\beta \rangle \langle \alpha|) + 2c_{\beta}^2 |\beta \rangle \langle \beta| + 2 | \beta \rangle \langle \beta| - 4 c_{\alpha}c_{\beta} |\alpha \rangle \langle \beta| - 4 c_{\beta}^2 |\beta \rangle \langle \beta| ) ~ | \gamma^{(i-1)} \rangle$\\
-$= 2(- \frac{1}{2}I_n + c_{\alpha}^2 |\alpha \rangle \langle \alpha| - c_{\alpha}c_{\beta} |\alpha \rangle \langle \beta| + c_{\alpha}c_{\beta} |\beta \rangle \langle \alpha| + (1 - c_{\beta}^2) |\beta \rangle \langle \beta|) ~ (c_{\alpha}^{(i-1)} |\alpha \rangle + c_{\beta}^{(i-1)} |\beta \rangle)$\\
+$= (- I_n + 2 c_{\alpha}^2 |\alpha \rangle \langle \alpha| - 2 c_{\alpha}c_{\beta} |\alpha \rangle \langle \beta| + 2 c_{\alpha}c_{\beta} |\beta \rangle \langle \alpha| + 2(1 - c_{\beta}^2) |\beta \rangle \langle \beta|) ~ (c_{\alpha}^{(i-1)} |\alpha \rangle + c_{\beta}^{(i-1)} |\beta \rangle)$\\
 $= (-c_{\alpha}^{(i-1)} + 2c_{\alpha}^2 c_{\alpha}^{(i-1)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i-1)}) |\alpha \rangle + (-c_{\beta}^{(i-1)} + 2c_{\alpha}c_{\beta} c_{\alpha}^{(i-1)} + 2(1 - c_{\beta}^2) c_{\beta}^{(i-1)} ) |\beta \rangle = | \gamma^{(i)} \rangle$\\
 
 $\Rightarrow  \begin{pmatrix} c_{\alpha}^{(i)}\\ c_{\beta}^{(i)}\end{pmatrix} = G \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix} \stackrel{!}{=} \begin{pmatrix}-c_{\alpha}^{(i-1)} + 2c_{\alpha}^2 c_{\alpha}^{(i-1)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i-1)} \\ -c_{\beta}^{(i-1)} + 2c_{\alpha}c_{\beta} c_{\alpha}^{(i-1)} + 2(1 - c_{\beta}^2) c_{\beta}^{(i-1)} \end{pmatrix}$\\
 
-$\begin{pmatrix} cos \theta & -sin \theta\\ sin \theta & cos \theta \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
+$\begin{pmatrix} cos \theta & -sin \theta\\ sin \theta & cos \theta \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$ *\\
 $= \begin{pmatrix} 2 cos^2 \frac{\theta}{2}-1 & -2 sin \frac{\theta}{2} cos \frac{\theta}{2} \theta\\ 2 sin \frac{\theta}{2} cos \frac{\theta}{2} & 2 cos^2 \frac{\theta}{2}-1 \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
 $= \begin{pmatrix} 2 \langle \alpha | \psi \rangle^2 -1 & -2 \langle \beta | \psi \rangle \langle \alpha | \psi \rangle \\ 2 \langle \beta | \psi \rangle \langle \alpha | \psi \rangle & 2 \langle \alpha | \psi \rangle^2 -1 \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
 $= \begin{pmatrix} 2 c_{\alpha}^2 -1 & -2 c_{\alpha}c_{\beta} \\ 2 c_{\alpha}c_{\beta} & 2 c_{\alpha}^2 -1 \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}
-= \begin{pmatrix} 2c_{\alpha}^2 c_{\alpha}^{(i-1)} -c_{\alpha}^{(i-1)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i-1)} \\ 2c_{\alpha}c_{\beta} c_{\alpha}^{(i-1)} + 2c_{\alpha}^2 c_{\beta}^{(i-1)} -c_{\beta}^{(i-1)}\end{pmatrix}$\\
+= \begin{pmatrix} 2c_{\alpha}^2 c_{\alpha}^{(i-1)} -c_{\alpha}^{(i-1)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i-1)} \\ 2c_{\alpha}c_{\beta} c_{\alpha}^{(i-1)} + 2c_{\alpha}^2 c_{\beta}^{(i-1)} -c_{\beta}^{(i-1)}\end{pmatrix}$ ist das Ergebnis für A2\\
 
-Für $G_{2,2} = -(2 c_{\beta}^2 -1) = ?$ würde das Ergebnis stimmen.
+Zeigen der Gleichheit:\\
+*: $= \begin{pmatrix} cos \theta & -sin \theta\\ sin \theta & -(1-cos \theta-1) \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
+$= \begin{pmatrix} 2 cos^2 \frac{\theta}{2}-1 & -2 sin \frac{\theta}{2} cos \frac{\theta}{2} \theta\\ 2 sin \frac{\theta}{2} cos \frac{\theta}{2} & -(2 sin^2 \frac{\theta}{2}-1) \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
+$= \begin{pmatrix} 2 \langle \alpha | \psi \rangle^2 -1 & -2 \langle \beta | \psi \rangle \langle \alpha | \psi \rangle \\ 2 \langle \beta | \psi \rangle \langle \alpha | \psi \rangle & -(2 \langle \beta | \psi \rangle^2 -1) \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}$\\
+$= \begin{pmatrix} 2 c_{\alpha}^2 -1 & -2 c_{\alpha}c_{\beta} \\ 2 c_{\alpha}c_{\beta} & -(2 c_{\beta}^2 -1) \end{pmatrix} \begin{pmatrix} c_{\alpha}^{(i-1)}\\ c_{\beta}^{(i-1)}\end{pmatrix}
+= \begin{pmatrix} 2c_{\alpha}^2 c_{\alpha}^{(i-1)} -c_{\alpha}^{(i-1)} - 2c_{\alpha}c_{\beta} c_{\beta}^{(i-1)} \\ 2c_{\alpha}c_{\beta} c_{\alpha}^{(i-1)} - 2c_{\beta}^2 c_{\beta}^{(i-1)} +c_{\beta}^{(i-1)}\end{pmatrix}~\square$
 
 \end{enumerate}
 
