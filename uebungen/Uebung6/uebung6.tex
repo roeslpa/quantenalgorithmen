@@ -99,9 +99,12 @@ $\Rightarrow$ Für zwei Grover-Iterationen $(\frac{29\sqrt{3}}{64} \frac{1}{\sqr
 \newpage
 \section*{Aufgabe 3}
 \begin{enumerate}[a)]
-\item
-\item
-
+\item Sei $VerKey(pk,sk')=b$ der gegebene Polynomialzeitalgorithmus mit\\
+$VerKey(pk,sk')=\begin{cases} 1, sk' ~\text{ist korrekter geheimer Schlüssel zu}~ pk\\0, sonst \end{cases}$\\
+Falls nur ein gültiges $(pk, sk)$ je $pk$ Paar existiert, ist die Laufzeit des Groveralgorithmus' mit $U_{VerKey}$ als reversible Einbettung von $VerKey$ $\mathcal{O}(2^{\frac{n_k}{2}})$. Falls mehrere korrekte $sk_i$ für jeden $pk$ existieren kann nach $\mathcal{O}(2^{\frac{n_k}{2}}m^{-\frac{1}{2}})$ die QFT zum Finden der Periode genutzt werden um damit ein $sk$ zu finden.
+\item Sei $VerM(pk,c,m,r)=b$ die Funktion der reversible Einbettung $U_{VerM}$ für den Groveralgorithmus mit\\
+$VerM(pk,c,m,r)=\begin{cases} 1, Enc(pk,m,r)=c\\0, sonst \end{cases}$\\
+Da nur ein gültiges Paar $(pk,m,r)\rightarrow c$ für eine sinnvolle Verschlüsselung existiert, ist die Laufzeit des Groveralgorithmus, der ein gültiges Paar $(m,r)$ zu $(pk,c)$ findet, $\mathcal{O}(2^{\frac{n_r+n_m}{2}})$.
 \end{enumerate}
 
 \end{document}
